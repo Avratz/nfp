@@ -1,0 +1,35 @@
+.menuButton {
+  display: block;
+  padding: 0.2rem;
+  position: relative;
+  z-index: 100;
+}
+
+.bar {
+  width: 80%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--neutral-4);
+  transition: all 0.25s cubic-bezier(0.15, 1, 0.7, 1);
+  position: absolute;
+}
+
+.top {
+  bottom: 10px;
+}
+
+.bottom {
+  top: 10px;
+}
+
+.crossTop {
+  transform: rotate(-45deg);
+  bottom: 15px;
+  background-color: var(--neutral-1);
+}
+
+.crossBottom {
+  transform: rotate(45deg);
+  top: 15px;
+  background-color: var(--neutral-1);
+}

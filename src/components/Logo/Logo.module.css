@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 100;
+}
+
+.isotipo {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+.heading {
+  letter-spacing: -0.5px;
+  font-family: var(--font-poppins);
+}
+
+.white {
+  fill: currentColor;
+  color: var(--neutral-8);
+}
+
+.dark {
+  fill: currentColor;
+  color: var(--neutral-1);
+}
