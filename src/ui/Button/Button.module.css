@@ -1,0 +1,83 @@
+.button {
+  border-radius: 5rem;
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-dmSans);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.primary {
+  color: var(--neutral-8);
+  background-color: transparent;
+  border-color: var(--neutral-4);
+}
+
+.primaryDark {
+  color: var(--neutral-2);
+  background-color: transparent;
+  border-color: var(--neutral-3);
+}
+
+.accent {
+  color: var(--neutral-8);
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.icon {
+  color: var(--neutral-8);
+  background-color: transparent;
+  border: 0 none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  border-radius: 0;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.xs {
+  font-size: var(--text-xs);
+  padding: 0.25rem 0.5rem;
+}
+
+.small {
+  font-size: var(--text-sm);
+  padding: 0.5rem 0.75rem;
+}
+
+.base {
+  font-size: var(--text-base);
+  padding: 0.75rem 1rem;
+}
+
+.medium {
+  font-size: var(--text-md);
+  padding: 1rem 1.25rem;
+}
+
+.loading {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  animation: loading 0.5s infinite alternate;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.blocked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

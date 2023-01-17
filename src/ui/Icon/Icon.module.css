@@ -1,0 +1,23 @@
+.icon {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xs {
+  width: 12px;
+}
+
+.small {
+  width: 16px;
+}
+
+.base {
+  width: 24px;
+}
+
+.medium {
+  width: 32px;
+}

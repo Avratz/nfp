@@ -1,0 +1,54 @@
+.heading {
+  font-family: var(--font-dmSans);
+  font-weight: bold;
+  color: var(--neutral-8);
+}
+
+.xs {
+  font-size: var(--text-xs);
+  line-height: var(--line-xs);
+}
+
+.sm {
+  font-size: var(--text-sm);
+  line-height: var(--line-sm);
+}
+
+.base {
+  font-size: var(--text-base);
+  line-height: var(--line-base);
+}
+
+.lg {
+  font-size: var(--text-lg);
+  line-height: var(--line-lg);
+}
+
+.xl {
+  font-size: var(--text-xl);
+  line-height: var(--line-xl);
+}
+
+.2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--line-2xl);
+}
+
+.3xl {
+  font-size: var(--text-3xl);
+  line-height: var(--line-3xl);
+}
+
+.4xl {
+  font-size: var(--text-4xl);
+  line-height: var(--line-4xl);
+}
+
+.5xl {
+  font-size: var(--text-5xl);
+  line-height: var(--line-5xl);
+}
+
+.inlineBlock {
+  display: inline-block;
+}

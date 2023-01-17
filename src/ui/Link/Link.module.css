@@ -1,0 +1,12 @@
+.link {
+  color: var(--neutral-3);
+  text-decoration: none;
+  font-family: var(--font-dmSans);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--neutral-1);
+  text-decoration: none;
+}
