@@ -1,6 +1,5 @@
 import { createElement, forwardRef, ReactNode } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
-import { motion } from 'framer-motion'
 
 import styles from './Heading.module.css'
 
@@ -49,5 +48,3 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
     )
   },
 )
-
-export const MotionHeading = motion(Heading)

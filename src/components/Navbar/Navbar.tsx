@@ -1,6 +1,6 @@
-import { MotionButton } from '@/ui/Button/Button'
-import { MotionHeading } from '@/ui/Heading/Heading'
-import { MotionLink } from '@/ui/Link/Link'
+import { Button } from '@/ui/Button/Button'
+import { Heading } from '@/ui/Heading/Heading'
+import { Link } from '@/ui/Link/Link'
 import { Variants, motion } from 'framer-motion'
 
 import styles from './Navbar.module.css'
@@ -33,6 +33,10 @@ const sidebar: Variants = {
     },
   },
 }
+
+const MotionHeading = motion(Heading)
+const MotionButton = motion(Button)
+const MotionLink = motion(Link)
 
 export function Navbar({ isOpen }: { isOpen: boolean }) {
   return (

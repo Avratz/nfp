@@ -6,12 +6,15 @@
 }
 
 .bar {
-  width: 80%;
+  width: 60%;
   height: 2px;
-  border-radius: 1px;
+  border-radius: 10px;
   background-color: var(--neutral-4);
   transition: all 0.25s cubic-bezier(0.15, 1, 0.7, 1);
   position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .top {
@@ -31,5 +34,6 @@
 .crossBottom {
   transform: rotate(45deg);
   top: 15px;
+
   background-color: var(--neutral-1);
 }

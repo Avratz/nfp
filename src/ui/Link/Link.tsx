@@ -1,7 +1,6 @@
 import { cx } from 'class-variance-authority'
 import { default as NextLink, LinkProps as NextLinkProps } from 'next/link'
 import { forwardRef } from 'react'
-import { motion } from 'framer-motion'
 
 import styles from './Link.module.css'
 
@@ -19,5 +18,3 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     )
   },
 )
-
-export const MotionLink = motion(Link)

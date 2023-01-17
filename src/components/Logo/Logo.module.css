@@ -15,7 +15,7 @@
 
 .heading {
   letter-spacing: -0.5px;
-  font-family: var(--font-poppins);
+  font-family: var(--font-poppins) !important;
 }
 
 .white {

@@ -3,3 +3,9 @@ body {
   color: var(--neutral-8);
   padding-top: 1.5rem;
 }
+
+a,
+a:visited,
+a:hover {
+  color: inherit;
+}

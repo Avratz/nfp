@@ -1,6 +1,5 @@
 import { forwardRef } from 'react'
 import { cva, VariantProps } from 'class-variance-authority'
-import { motion } from 'framer-motion'
 
 import { ButtonOrLink } from '@/ui/ButtonOrLink/ButtonOrLink'
 import type { ButtonOrLinkProps } from '@/ui/ButtonOrLink/ButtonOrLink'
@@ -73,5 +72,3 @@ export const Button = forwardRef<
     />
   )
 })
-
-export const MotionButton = motion(Button)

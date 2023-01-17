@@ -11,10 +11,17 @@
   --neutral-8: #fcfcfd;
 
   --accent: #3772ff;
+  --accent-dark: #2c5ed6;
 
   /* #endregion */
 
   /* #region font */
+
+  --text-3xs: 0.53rem;
+  --line-3xs: 0.625rem;
+
+  --text-2xs: 0.625rem;
+  --line-2xs: 0.75rem;
 
   --text-xs: 0.75rem;
   --line-xs: 1rem;
@@ -37,7 +44,7 @@
   --text-3xl: 1.875rem;
   --line-3xl: 2.25rem;
 
-  --text-4xl: 2.25rem;
+  --text-4xl: 2rem;
   --line-4xl: 2.5rem;
 
   --text-5xl: 3rem;
