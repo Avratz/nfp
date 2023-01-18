@@ -1,4 +1,4 @@
-import { cva } from 'class-variance-authority'
+import { cva, VariantProps } from 'class-variance-authority'
 import Image from 'next/image'
 
 import styles from './Avatar.module.css'
@@ -15,17 +15,19 @@ const avatarStyles = cva(styles.avatar, {
   },
 })
 
+interface AvatarProps extends VariantProps<typeof avatarStyles> {
+  src: string
+  alt?: string
+  size?: 'small' | 'base'
+  className?: string
+}
+
 export function Avatar({
   src,
   alt = '',
   size = 'base',
   className,
-}: {
-  src: string
-  alt?: string
-  size?: 'small' | 'base'
-  className?: string
-}) {
+}: AvatarProps) {
   return (
     <picture
       className={avatarStyles({

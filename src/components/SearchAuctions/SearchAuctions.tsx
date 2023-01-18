@@ -1,4 +1,6 @@
 'use client'
+import { Container } from '@/ui/Container/Container'
+import { Input } from '@/ui/Input/Input'
 import { SelectBox } from '@/ui/SelectBox/SelectBox'
 import { cx } from 'class-variance-authority'
 import { useState } from 'react'
@@ -10,7 +12,16 @@ import styles from './SearchAuctions.module.css'
 export function SearchAuctions() {
   const [selected, setSelected] = useState<{ name: string } | undefined>()
   return (
-    <section>
+    <Container as="section">
+      <Input placeholder="Search" icon={{ slot: 'right', name: 'search' }} />
+      <SelectBox
+        placeholder="Recently added"
+        selected={selected}
+        setSelected={setSelected}
+      >
+        hola
+      </SelectBox>
+
       <SelectBox
         placeholder="Colors"
         selected={selected}
@@ -24,6 +35,6 @@ export function SearchAuctions() {
           </SelectBox.Option>
         ))}
       </SelectBox>
-    </section>
+    </Container>
   )
 }

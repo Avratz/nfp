@@ -1,0 +1,52 @@
+.input {
+  background-color: transparent;
+  border-radius: 0.75rem;
+  font-family: var(--font-poppins);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  color: var(--neutral-8);
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--neutral-8);
+  opacity: 1;
+}
+
+.inputLabel {
+  display: block;
+}
+.inputWrapper {
+  position: relative;
+}
+
+.base {
+  border: 2px solid var(--neutral-3);
+}
+
+.blank {
+  border: none;
+  border-radius: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+}
+
+.iconLeft {
+  left: 1rem;
+}
+
+.iconRight {
+  right: 1rem;
+}
+
+.inputLeft {
+  padding-left: 3.5rem;
+}
+
+.inputRight {
+  padding-right: 3.5rem;
+}

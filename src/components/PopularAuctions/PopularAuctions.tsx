@@ -40,7 +40,7 @@ export function PopularAuctions() {
             </div>
             <div className={styles.box}>
               <Button className={styles.priceIcon} intent="icon">
-                <Icon type="stop" />
+                <Icon name="stop" />
               </Button>
               <div>
                 <div className={styles.topTitle}>Instant price</div>
@@ -88,10 +88,10 @@ export function PopularAuctions() {
 
         <div className={styles.navigation}>
           <Button intent="icon" className={cx(styles.arrow, styles.disabled)}>
-            <Icon type="arrowLeft" />
+            <Icon name="arrowLeft" />
           </Button>
           <Button intent="icon" className={styles.arrow}>
-            <Icon type="arrowRight" />
+            <Icon name="arrowRight" />
           </Button>
         </div>
       </div>

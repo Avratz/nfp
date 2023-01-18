@@ -48,7 +48,7 @@
 .icon {
   color: var(--neutral-8);
   background-color: transparent;
-  border: 0 none;
+  border: none;
   width: 32px;
   height: 32px;
   position: relative;

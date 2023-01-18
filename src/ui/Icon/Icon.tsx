@@ -4,6 +4,7 @@ import ArrowDown from '@/assets/icons/arrow-down.svg'
 import Stop from '@/assets/icons/stop.svg'
 import ArrowLeft from '@/assets/icons/left-arrow.svg'
 import ArrowRight from '@/assets/icons/right-arrow.svg'
+import Search from '@/assets/icons/search.svg'
 
 import styles from './Icon.module.css'
 
@@ -12,6 +13,7 @@ const icons = {
   stop: Stop,
   arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
+  search: Search,
 }
 const iconStyle = cva(styles.icon, {
   variants: {
@@ -27,13 +29,15 @@ const iconStyle = cva(styles.icon, {
   },
 })
 
+export type IconsName = keyof typeof icons
+
 interface IconProps extends VariantProps<typeof iconStyle> {
-  type: keyof typeof icons
+  name: IconsName
   className?: string
 }
 
-export function Icon({ type, size, className }: IconProps) {
-  const CurrentIcon = icons[type]
+export function Icon({ name, size, className }: IconProps) {
+  const CurrentIcon = icons[name]
   return (
     <picture className={iconStyle({ size, className })}>
       <CurrentIcon />

@@ -129,6 +129,6 @@
 }
 
 .disabled {
-  border: 0 none;
+  border: none;
   pointer-events: none;
 }

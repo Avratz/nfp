@@ -32,7 +32,7 @@ export function SelectBox({
         <Listbox.Button className={cx(styles.button, className)}>
           <span>{selected?.name || placeholder}</span>
           <span className={styles.icon}>
-            <Icon type="arrowDown" size="xs" />
+            <Icon name="arrowDown" size="xs" />
           </span>
         </Listbox.Button>
 
