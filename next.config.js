@@ -12,6 +12,16 @@ const nextConfig = {
 
     return config
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/dvmll0ruo/image/upload/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

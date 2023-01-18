@@ -1,0 +1,134 @@
+.popularAuctions {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.image {
+  aspect-ratio: 2 / 3;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.auctionData {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.authorAndPrice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.priceIcon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.priceIcon {
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.title {
+  letter-spacing: -1px;
+}
+
+.topTitle {
+  color: var(--neutral-4);
+  font-family: var(--font-poppins);
+  font-weight: var(--font-regular);
+  font-size: var(--text-xs);
+}
+
+.bottomTitle {
+  font-family: var(--font-poppins) !important;
+  font-weight: var(--font-medium) !important;
+}
+
+.auctionStatus {
+  background-color: var(--neutral-2);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  gap: 1.5rem;
+}
+
+.auctionStatusTitle {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-medium);
+  padding-bottom: 0.25rem;
+}
+
+.priceUsd {
+  padding-top: 0.25rem;
+  color: var(--neutral-4);
+}
+
+.timer {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.25rem;
+}
+
+.timeValue {
+  font-family: var(--font-dmSans);
+  font-weight: var(--font-bold);
+  font-size: var(--text-4xl);
+  line-height: var(--line-4xl);
+}
+
+.timeUnit {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-medium);
+  color: var(--neutral-4);
+}
+
+.auctionButtons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 2px solid var(--neutral-4);
+  border-radius: 50%;
+}
+
+.disabled {
+  border: 0 none;
+  pointer-events: none;
+}

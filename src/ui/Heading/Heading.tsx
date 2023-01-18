@@ -15,6 +15,7 @@ const headingStyles = cva(styles.heading, {
       '3xl': styles['3xl'],
       '4xl': styles['4xl'],
       '5xl': styles['5xl'],
+      '6xl': styles['6xl'],
     },
     inlineBlock: {
       true: styles.inlineBlock,

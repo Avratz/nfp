@@ -1,6 +1,6 @@
 .heading {
   font-family: var(--font-dmSans);
-  font-weight: bold;
+  font-weight: var(--font-bold);
 }
 
 .xs {
@@ -46,6 +46,11 @@
 .5xl {
   font-size: var(--text-5xl);
   line-height: var(--line-5xl);
+}
+
+.6xl {
+  font-size: var(--text-6xl);
+  line-height: var(--line-6xl);
 }
 
 .inlineBlock {

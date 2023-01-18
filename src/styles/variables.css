@@ -1,5 +1,5 @@
 :root {
-  /* #region color pallete */
+  /* #region color palette */
 
   --neutral-1: #141416;
   --neutral-2: #23262f;
@@ -12,6 +12,8 @@
 
   --accent: #3772ff;
   --accent-dark: #2c5ed6;
+
+  --green: #45b26b;
 
   /* #endregion */
 
@@ -49,6 +51,9 @@
 
   --text-5xl: 3rem;
   --line-5xl: 1;
+
+  --text-6xl: 4rem;
+  --line-6xl: 1;
 
   --font-regular: 400;
   --font-medium: 500;
