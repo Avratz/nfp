@@ -39,7 +39,9 @@
   position: absolute;
   background-color: var(--neutral-2);
   list-style: none;
+  z-index: 10;
 }
+
 .icon {
   width: 32px;
   height: 32px;

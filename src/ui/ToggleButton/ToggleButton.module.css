@@ -1,0 +1,14 @@
+.toggleButton {
+  color: var(--neutral-4);
+  font-family: var(--font-dmSans);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  padding: 0.3rem 0.75rem 0.25rem;
+  display: inline-block;
+}
+
+.checked {
+  color: var(--neutral-2);
+  background-color: var(--neutral-8);
+  border-radius: 5rem;
+}

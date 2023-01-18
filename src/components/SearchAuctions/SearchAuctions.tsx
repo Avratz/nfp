@@ -2,6 +2,8 @@
 import { Container } from '@/ui/Container/Container'
 import { Input } from '@/ui/Input/Input'
 import { SelectBox } from '@/ui/SelectBox/SelectBox'
+import { ToggleButton } from '@/ui/ToggleButton/ToggleButton'
+import { ToggleButtonGroup } from '@/ui/ToggleButtonGroup/ToggleButtonGroup'
 import { cx } from 'class-variance-authority'
 import { useState } from 'react'
 
@@ -35,6 +37,11 @@ export function SearchAuctions() {
           </SelectBox.Option>
         ))}
       </SelectBox>
+      <ToggleButtonGroup value="all-items" onChange={(value) => null}>
+        <ToggleButton value="all-items">All Items</ToggleButton>
+        <ToggleButton value="art">Art</ToggleButton>
+        <ToggleButton value="photography">Photography</ToggleButton>
+      </ToggleButtonGroup>
     </Container>
   )
 }
