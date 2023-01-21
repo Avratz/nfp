@@ -1,0 +1,111 @@
+.rangeContainer {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+}
+
+.label {
+  color: var(--neutral-5);
+  font-size: var(--text-xs);
+}
+
+.units {
+  display: flex;
+  justify-content: space-between;
+  color: var(--neutral-8);
+  margin-top: 0.25rem;
+}
+
+.inputRange {
+  width: 100%;
+  height: 24px;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  z-index: 15;
+  background: transparent;
+}
+
+.inputRange::-webkit-slider-runnable-track {
+  height: 24px;
+}
+
+.inputRange::-moz-range-track {
+  height: 24px;
+}
+
+.inputRange::-webkit-slider-thumb {
+  appearance: none;
+  height: 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.rangeBox {
+  position: relative;
+  width: 100%;
+  height: 24px;
+}
+
+.track,
+.progress {
+  width: 100%;
+  height: 20px;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 55%, 0% 45%);
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.track {
+  z-index: 10;
+}
+
+.progress {
+  height: 16px;
+  z-index: 11;
+}
+
+.dot {
+  background-color: var(--accent);
+  height: 20px;
+  width: 20px;
+  border: 4px solid var(--neutral-8);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  z-index: 12;
+}
+
+.tooltip {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 30px;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-8);
+  color: var(--neutral-2);
+  font-size: var(--text-xs);
+}
+
+.tooltip::after {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: var(--neutral-8);
+  position: absolute;
+  bottom: -5px;
+  left: calc(50% - 10px);
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  transform: rotate(-45deg);
+  border-radius: 0 0 0 0.4rem;
+}

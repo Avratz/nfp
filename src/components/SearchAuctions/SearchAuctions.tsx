@@ -1,6 +1,7 @@
 'use client'
 import { Container } from '@/ui/Container/Container'
 import { Input } from '@/ui/Input/Input'
+import { Range } from '@/ui/Range/Range'
 import { SelectBox } from '@/ui/SelectBox/SelectBox'
 import { ToggleButton } from '@/ui/ToggleButton/ToggleButton'
 import { ToggleButtonGroup } from '@/ui/ToggleButtonGroup/ToggleButtonGroup'
@@ -42,6 +43,7 @@ export function SearchAuctions() {
         <ToggleButton value="art">Art</ToggleButton>
         <ToggleButton value="photography">Photography</ToggleButton>
       </ToggleButtonGroup>
+      <Range min={0.01} max={10} step={0.01} unit="ETH" label="Price Range" />
     </Container>
   )
 }
