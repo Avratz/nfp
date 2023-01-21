@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes, useRef, useState } from 'react'
+import { ChangeEvent, InputHTMLAttributes, useState } from 'react'
 import styles from './Range.module.css'
 
 interface RangeProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -27,15 +27,6 @@ export function Range({
     if (onInput) {
       onInput(e)
     }
-  }
-
-  function calculatePercentage(value: number, total: number) {
-    let percentage = (value * 100) / total ?? 50
-    return percentage + '%'
-  }
-
-  function calculateLinearGradient(percentage: string) {
-    return `linear-gradient(to right, var(--accent) 0%, var(--accent) ${percentage}, var(--neutral-3) ${percentage}, var(--neutral-3) 100%)`
   }
 
   return (
@@ -80,4 +71,13 @@ export function Range({
       </datalist>
     </label>
   )
+}
+
+function calculatePercentage(value: number, total: number) {
+  let percentage = (value * 100) / total ?? 50
+  return percentage + '%'
+}
+
+function calculateLinearGradient(percentage: string) {
+  return `linear-gradient(to right, var(--accent) 0%, var(--accent) ${percentage}, var(--neutral-3) ${percentage}, var(--neutral-3) 100%)`
 }

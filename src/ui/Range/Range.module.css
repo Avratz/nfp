@@ -49,6 +49,10 @@
   height: 24px;
 }
 
+.rangeBox:hover .tooltip {
+  display: flex;
+}
+
 .track,
 .progress {
   width: 100%;
@@ -94,6 +98,7 @@
   background-color: var(--neutral-8);
   color: var(--neutral-2);
   font-size: var(--text-xs);
+  display: none;
 }
 
 .tooltip::after {
