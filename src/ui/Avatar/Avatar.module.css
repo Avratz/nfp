@@ -1,6 +1,7 @@
 .avatar {
   position: relative;
   border-radius: 50%;
+  border: 2px solid var(--neutral-2);
 }
 
 .small {

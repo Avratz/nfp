@@ -5,6 +5,7 @@ import Stop from '@/assets/icons/stop.svg'
 import ArrowLeft from '@/assets/icons/left-arrow.svg'
 import ArrowRight from '@/assets/icons/right-arrow.svg'
 import Search from '@/assets/icons/search.svg'
+import Candlesticks from '@/assets/icons/candlesticks.svg'
 
 import styles from './Icon.module.css'
 
@@ -14,7 +15,9 @@ const icons = {
   arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
   search: Search,
+  candlesticks: Candlesticks,
 }
+
 const iconStyle = cva(styles.icon, {
   variants: {
     size: {
