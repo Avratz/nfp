@@ -100,3 +100,12 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+
+.blank {
+  color: var(--neutral-8);
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding: 0;
+  text-align: left;
+}

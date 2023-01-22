@@ -31,7 +31,7 @@ export function PopularAuctions() {
                 src={firstAuction.authorAvatar}
                 alt={firstAuction.author}
               />
-              <div>
+              <div className={styles.boxData}>
                 <div className={styles.topTitle}>Creator</div>
                 <Heading as="h4" size="sm" className={styles.bottomTitle}>
                   {firstAuction.author}
@@ -42,7 +42,7 @@ export function PopularAuctions() {
               <Button className={styles.priceIcon} intent="icon">
                 <Icon name="stop" />
               </Button>
-              <div>
+              <div className={styles.boxData}>
                 <div className={styles.topTitle}>Instant price</div>
                 <Heading as="h4" size="sm" className={styles.bottomTitle}>
                   {firstAuction.instantPrice}

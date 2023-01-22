@@ -13,6 +13,7 @@ const buttonStyles = cva(styles.button, {
       primaryDark: styles.primaryDark,
       accent: styles.accent,
       icon: styles.icon,
+      blank: styles.blank,
     },
     fullWidth: {
       true: styles.fullWidth,

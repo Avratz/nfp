@@ -8,3 +8,10 @@
 .Red {
   background-color: red;
 }
+
+.auctionCards{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
