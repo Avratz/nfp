@@ -9,3 +9,9 @@ a:visited,
 a:hover {
   color: inherit;
 }
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding-top: 0;
+  }
+}

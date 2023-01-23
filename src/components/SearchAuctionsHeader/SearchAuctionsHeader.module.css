@@ -17,6 +17,7 @@
 .divider {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .headerFilters {
     flex-direction: row;
@@ -24,13 +25,16 @@
     gap: 2rem;
     margin: 3rem 0;
   }
+
   .selectBox {
     width: 40%;
   }
+
   .subNavigation {
     width: 60%;
     justify-content: flex-end;
   }
+
   .searchIcon {
     background-color: var(--accent);
     border-radius: 50%;
@@ -39,13 +43,35 @@
     color: var(--neutral-8);
     right: 0;
   }
+
   .inputSearch {
     padding: 1rem 0;
     font-size: var(--text-2xl);
     font-weight: var(--font-regular);
+    border: none;
+    border-radius: 0;
   }
+
+  .inputSearch:focus {
+    outline: none;
+  }
+
   .divider {
     display: block;
     margin-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 6rem;
+  }
+
+  .headerFilters {
+    margin: 5.5rem 0;
+  }
+
+  .selectBox {
+    width: 20%;
   }
 }

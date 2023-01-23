@@ -36,3 +36,9 @@
   top: 15px;
   background-color: var(--neutral-1);
 }
+
+@media (min-width: 1200px) {
+  .menuButton {
+    display: none !important;
+  }
+}

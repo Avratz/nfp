@@ -72,6 +72,7 @@
   text-align: center;
   padding: 2rem 0;
   gap: 1.5rem;
+  box-shadow: 0 4rem 4rem -3rem rgba(31, 47, 70, 0.12);
 }
 
 .auctionStatusTitle {
@@ -155,5 +156,23 @@
 
   .auctionData {
     width: 45%;
+  }
+  .navigation {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .popularAuctions {
+    gap: 8rem;
+    margin-bottom: 8rem;
+  }
+  .image {
+    width: 65%;
+    max-height: 800px;
+  }
+
+  .auctionData {
+    width: 35%;
   }
 }

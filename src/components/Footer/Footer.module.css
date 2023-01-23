@@ -33,3 +33,19 @@
     align-items: center;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    background-color: var(--neutral-1);
+    border-top: 1px solid var(--neutral-3);
+    padding: 5rem 0 0rem;
+  }
+  .heading {
+    font-size: var(--text-2xl);
+    margin-bottom: 3rem;
+  }
+  .createdBy {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

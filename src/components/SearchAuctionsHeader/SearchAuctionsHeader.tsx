@@ -1,5 +1,4 @@
 'use client'
-import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { Divider } from '@/ui/Divider/Divider'
 import { Input } from '@/ui/Input/Input'
 import { SelectBox } from '@/ui/SelectBox/SelectBox'
@@ -9,15 +8,12 @@ import { ToggleButtonGroup } from '@/ui/ToggleButtonGroup/ToggleButtonGroup'
 import styles from './SearchAuctionsHeader.module.css'
 
 export function SearchAuctionsHeader() {
-  let { matches: tabletOrBigger } = useMediaQuery({ device: 'tablet' })
-
   return (
     <header className={styles.header}>
       <Input
         placeholder="Type to find something nice..."
         className={styles.inputSearch}
         icon={{ slot: 'right', name: 'search', class: styles.searchIcon }}
-        intent={tabletOrBigger ? 'blank' : 'base'}
       />
       <Divider className={styles.divider} />
       <div className={styles.headerFilters}>

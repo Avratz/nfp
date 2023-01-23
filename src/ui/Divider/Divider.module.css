@@ -1,7 +1,14 @@
 .divider {
   all: unset;
   display: block;
+  background-color: var(--neutral-3);
+}
+
+.horizontal {
   width: 100%;
   height: 1px;
-  background-color: var(--neutral-3);
+}
+.vertical {
+  width: 1px;
+  height: 100%;
 }

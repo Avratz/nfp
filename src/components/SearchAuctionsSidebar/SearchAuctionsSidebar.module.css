@@ -19,3 +19,9 @@
     margin: 0;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .searchAuctionsSidebar {
+    width: 20%;
+  }
+}

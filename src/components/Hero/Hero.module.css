@@ -26,3 +26,16 @@
     margin-top: 8rem;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .toptitle {
+    font-size: var(--text-xs);
+  }
+  .title {
+    font-size: var(--text-5xl);
+  }
+}
