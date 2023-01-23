@@ -49,7 +49,11 @@ export function PopularAuctions() {
               </div>
             </div>
             <div className={styles.box}>
-              <Button className={styles.priceIcon} intent="icon">
+              <Button
+                className={styles.priceIcon}
+                intent="icon"
+                title="Buy now"
+              >
                 <Icon name="stop" />
               </Button>
               <div className={styles.boxData}>
@@ -97,10 +101,14 @@ export function PopularAuctions() {
         </div>
 
         <div className={styles.navigation}>
-          <Button intent="icon" className={cx(styles.arrow, styles.disabled)}>
+          <Button
+            intent="icon"
+            className={cx(styles.arrow, styles.disabled)}
+            title="Previous Auction"
+          >
             <Icon name="arrowLeft" />
           </Button>
-          <Button intent="icon" className={styles.arrow}>
+          <Button intent="icon" className={styles.arrow} title="Next Auction">
             <Icon name="arrowRight" />
           </Button>
         </div>

@@ -16,7 +16,12 @@ export function ButtonMenu({
   }
 
   return (
-    <Button intent="icon" className={styles.menuButton} onClick={handleClick}>
+    <Button
+      intent="icon"
+      className={styles.menuButton}
+      onClick={handleClick}
+      title="Menu"
+    >
       <div
         className={cx(styles.bar, styles.top, isOpen ? styles.crossTop : '')}
       ></div>
