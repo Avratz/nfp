@@ -12,7 +12,7 @@
 .primary {
   color: var(--neutral-8);
   background-color: transparent;
-  border-color: var(--neutral-4);
+  border-color: var(--neutral-3);
 }
 
 .primary:hover {
@@ -71,7 +71,7 @@
 
 .base {
   font-size: var(--text-base);
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.5rem;
 }
 
 .medium {

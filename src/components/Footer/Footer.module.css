@@ -1,0 +1,27 @@
+.footer {
+  background-color: var(--neutral-2);
+  margin: auto;
+  padding: 4rem 0 1.5rem;
+}
+
+.logoContainer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.heading {
+  font-family: var(--font-poppins) !important;
+  font-weight: var(--font-regular) !important;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.createdBy {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-regular);
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--neutral-4);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}

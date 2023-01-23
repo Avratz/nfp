@@ -6,6 +6,7 @@ import styles from './Heading.module.css'
 const headingStyles = cva(styles.heading, {
   variants: {
     size: {
+      '2xs': styles['2xs'],
       xs: styles.xs,
       sm: styles.sm,
       base: styles.base,

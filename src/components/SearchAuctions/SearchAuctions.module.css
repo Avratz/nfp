@@ -9,7 +9,11 @@
   background-color: red;
 }
 
-.auctionCards{
+.container {
+  margin-bottom: 4rem;
+}
+
+.auctionCards {
   display: flex;
   flex-direction: column;
   gap: 2rem;

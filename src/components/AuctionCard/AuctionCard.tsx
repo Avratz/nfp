@@ -1,4 +1,5 @@
 import { Avatar } from '@/ui/Avatar/Avatar'
+import { Divider } from '@/ui/Divider/Divider'
 import { Heading } from '@/ui/Heading/Heading'
 import { Icon } from '@/ui/Icon/Icon'
 import Image from 'next/image'
@@ -25,7 +26,14 @@ export function AuctionCard({
   return (
     <article className={styles.auctionCard}>
       <picture className={styles.image}>
-        <Image src={image} alt="" fill />
+        <Image
+          src={image}
+          alt=""
+          fill
+          style={{
+            objectFit: 'cover',
+          }}
+        />
       </picture>
       <div className={styles.auctionCardData}>
         <header className={styles.headerTitle}>
@@ -42,7 +50,7 @@ export function AuctionCard({
           </span>
           <span className={styles.stockValue}>{stock} in stock</span>
         </div>
-        <div className={styles.divider}></div>
+        <Divider />
         <div className={styles.highestBidBox}>
           <span className={styles.highestBid}>
             <Icon name="candlesticks" />

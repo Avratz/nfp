@@ -9,7 +9,7 @@ import styles from './SearchAuctions.module.css'
 
 export function SearchAuctions() {
   return (
-    <Container as="section">
+    <Container as="section" className={styles.container}>
       <SearchAuctionsHeader />
       <div>
         <SearchAuctionsSidebar />

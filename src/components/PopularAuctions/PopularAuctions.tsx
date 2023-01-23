@@ -17,7 +17,14 @@ export function PopularAuctions() {
   return (
     <Container as="section" className={styles.popularAuctions}>
       <picture className={styles.image}>
-        <Image src={firstAuction.media.image} alt="" fill />
+        <Image
+          src={firstAuction.media.image}
+          alt=""
+          fill
+          style={{
+            objectFit: 'cover',
+          }}
+        />
       </picture>
 
       <div className={styles.auctionData}>

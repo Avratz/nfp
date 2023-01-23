@@ -9,6 +9,6 @@
 
 .checked {
   color: var(--neutral-2);
-  background-color: var(--neutral-8);
+  background-color: var(--neutral-6);
   border-radius: 5rem;
 }

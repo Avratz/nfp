@@ -1,4 +1,5 @@
 import { Button } from '@/ui/Button/Button'
+import { Divider } from '@/ui/Divider/Divider'
 import { Icon } from '@/ui/Icon/Icon'
 import { Range } from '@/ui/Range/Range'
 import { SelectBox } from '@/ui/SelectBox/SelectBox'
@@ -16,7 +17,7 @@ export function SearchAuctionsSidebar() {
   return (
     <aside className={styles.searchAuctionsSidebar}>
       <Range min={0.01} max={10} step={0.01} unit="ETH" label="Price Range" />
-      <div className={styles.divider}></div>
+      <Divider />
       <SelectBox
         placeholder="Most liked"
         setSelected={(value) => null}
@@ -37,7 +38,7 @@ export function SearchAuctionsSidebar() {
           </SelectBox.Option>
         ))}
       </SelectBox>
-      <div className={styles.divider}></div>
+      <Divider />
       <Button intent="blank" className={styles.resetButton}>
         <Icon name="closeCircle" />
         <span>Reset filter</span>
