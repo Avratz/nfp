@@ -29,13 +29,20 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
   .toptitle {
     font-size: var(--text-xs);
   }
   .title {
     font-size: var(--text-5xl);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }

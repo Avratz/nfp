@@ -14,7 +14,7 @@ export function Navbar() {
       <Link href="/" className={styles.link}>
         What we do
       </Link>
-      <Button href="/" intent="primary" className={styles.button}>
+      <Button href="/" className={styles.button}>
         Connect Wallet
       </Button>
     </nav>

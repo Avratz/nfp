@@ -1,4 +1,6 @@
 'use client'
+import dynamic from 'next/dynamic'
+
 import { Container } from '@/ui/Container/Container'
 
 import { Logo } from '@/components/Logo/Logo'
@@ -14,12 +16,11 @@ const Drawer = dynamic(
   },
 )
 import { Navbar } from '@/components/Navbar/Navbar'
-
-import styles from './Header.module.css'
+import { ButtonMenu } from '@/components/ButtonMenu/ButtonMenu'
 
 import { useMenu } from '@/hooks/useMenu'
-import { ButtonMenu } from '../ButtonMenu/ButtonMenu'
-import dynamic from 'next/dynamic'
+
+import styles from './Header.module.css'
 
 export function Header() {
   const { isOpen, setIsOpen } = useMenu()

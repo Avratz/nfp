@@ -176,3 +176,18 @@
     width: 35%;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .popularAuctions {
+    gap: 12rem;
+  }
+  .image {
+    width: 60%;
+  }
+  .auctionData {
+    width: 40%;
+  }
+  .auctionStatus {
+    padding: 3rem 0;
+  }
+}
