@@ -12,3 +12,10 @@
   font-size: var(--text-sm);
   line-height: var(--line-sm);
 }
+
+@media screen and (min-width: 768px) {
+  .searchAuctionsSidebar {
+    width: 40%;
+    margin: 0;
+  }
+}

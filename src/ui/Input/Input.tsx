@@ -23,6 +23,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: {
     slot: 'left' | 'right'
     name: IconsName
+    class?: string
   }
 }
 
@@ -37,20 +38,22 @@ export function Input({
   const _id = useId()
   return (
     <>
-      <label htmlFor={id || _id} className={cx(styles.inputLabel, className)}>
+      <label htmlFor={id || _id} className={styles.inputLabel}>
         {label ? label : null}
         <div className={styles.inputWrapper}>
           {icon?.slot === 'left' && icon?.name !== undefined ? (
             <Icon
               name={icon?.name}
-              className={cx(styles.icon, styles.iconLeft)}
+              className={cx(styles.icon, styles.iconLeft, icon.class)}
             />
           ) : null}
           <input
             className={inputStyles({
               intent,
-              className:
+              className: cx(
                 icon?.slot === 'left' ? styles.inputLeft : styles.inputRight,
+                className,
+              ),
             })}
             id={id || _id}
             type="text"
@@ -59,7 +62,7 @@ export function Input({
           {icon?.slot === 'right' && icon?.name !== undefined ? (
             <Icon
               name={icon?.name}
-              className={cx(styles.icon, styles.iconRight)}
+              className={cx(styles.icon, styles.iconRight, icon.class)}
             />
           ) : null}
         </div>

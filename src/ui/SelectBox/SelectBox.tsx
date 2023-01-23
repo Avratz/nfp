@@ -25,11 +25,11 @@ export function SelectBox({
 }: SelectBoxProps) {
   return (
     <Listbox value={selected} onChange={setSelected}>
-      <div className={styles.selectBox}>
+      <div className={cx(styles.selectBox, className)}>
         {label ? (
           <Listbox.Label className={styles.label}>{label}</Listbox.Label>
         ) : null}
-        <Listbox.Button className={cx(styles.button, className)}>
+        <Listbox.Button className={styles.button}>
           <span>{selected?.name || placeholder}</span>
           <span className={styles.icon}>
             <Icon name="arrowDown" size="xs" />

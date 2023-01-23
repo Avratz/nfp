@@ -30,6 +30,8 @@ export function AuctionCard({
           src={image}
           alt=""
           fill
+          sizes="(max-width: 768px) 100vw,
+              33vw"
           style={{
             objectFit: 'cover',
           }}

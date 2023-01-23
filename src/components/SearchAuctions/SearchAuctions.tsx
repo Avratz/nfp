@@ -11,7 +11,7 @@ export function SearchAuctions() {
   return (
     <Container as="section" className={styles.container}>
       <SearchAuctionsHeader />
-      <div>
+      <div className={styles.searchContainer}>
         <SearchAuctionsSidebar />
         <div className={styles.auctionCards}>
           {popularAuctions.map((auction) => (

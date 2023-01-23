@@ -30,9 +30,14 @@
   border-radius: 0;
 }
 
+.blank:focus {
+  outline: none;
+}
+
 .icon {
   position: absolute;
   top: 0;
+  color: var(--neutral-4);
 }
 
 .iconLeft {

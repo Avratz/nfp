@@ -8,3 +8,44 @@
 .subNavigation {
   margin: 0.5rem 0;
 }
+
+.headerFilters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.divider {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .headerFilters {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  .selectBox {
+    width: 40%;
+  }
+  .subNavigation {
+    width: 60%;
+    justify-content: flex-end;
+  }
+  .searchIcon {
+    background-color: var(--accent);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: var(--neutral-8);
+    right: 0;
+  }
+  .inputSearch {
+    padding: 1rem 0;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-regular);
+  }
+  .divider {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}

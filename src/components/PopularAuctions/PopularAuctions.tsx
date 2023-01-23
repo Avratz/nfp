@@ -21,16 +21,19 @@ export function PopularAuctions() {
           src={firstAuction.media.image}
           alt=""
           fill
+          sizes="(max-width: 768px) 100vw,
+              50vw"
           style={{
             objectFit: 'cover',
           }}
+          priority
         />
       </picture>
 
       <div className={styles.auctionData}>
         <div>
           <Heading as="h3" size="6xl" className={styles.title}>
-            The {firstAuction.author} Network ®
+            The {getLastName(firstAuction.author)} Network ®
           </Heading>
           <div className={styles.authorAndPrice}>
             <div className={styles.box}>
@@ -104,4 +107,8 @@ export function PopularAuctions() {
       </div>
     </Container>
   )
+}
+
+function getLastName(name: string) {
+  return name.split(' ').pop()
 }

@@ -35,7 +35,13 @@ export function Avatar({
         className,
       })}
     >
-      <Image src={src} alt={alt} fill />
+      <Image
+        src={src}
+        alt={alt}
+        width={size === 'small' ? 20 : 36}
+        height={size === 'small' ? 20 : 36}
+        sizes="100vw"
+      />
     </picture>
   )
 }
