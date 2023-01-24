@@ -7,9 +7,9 @@ import styles from './Hero.module.css'
 export function Hero() {
   return (
     <Container as="section" className={styles.hero}>
-      <Heading as="h4" size="2xs" className={styles.toptitle}>
+      <p className={styles.toptitle}>
         Create, explore, & SELL digital art NFTs.
-      </Heading>
+      </p>
       <Heading as="h2" size="4xl" className={styles.title}>
         The new creative economy.
       </Heading>

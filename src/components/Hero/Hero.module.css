@@ -8,6 +8,8 @@
   font-family: var(--font-poppins) !important;
   color: var(--neutral-5);
   text-transform: uppercase;
+  font-size: var(--text-2xs);
+  line-height: var(--line-2xs);
 }
 
 .title {
@@ -33,10 +35,10 @@
     padding-bottom: 6rem;
   }
   .toptitle {
-    font-size: var(--text-xs);
+    font-size: var(--text-xs) !important;
   }
   .title {
-    font-size: var(--text-5xl);
+    font-size: var(--text-5xl) !important;
   }
 }
 
