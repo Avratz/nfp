@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 
 export function useCarousel<T extends any[]>(
   data: T,
@@ -9,7 +9,7 @@ export function useCarousel<T extends any[]>(
   changeSlide: (direction: 'next' | 'prev') => () => void
   currentIndex: number
 } {
-  const [currentIndex, setCurrentIndex] = useState(startingIndex)
+  const index = useRef(startingIndex)
   const [selectedSlide, setSelectedSlide] = useState(data[startingIndex])
 
   /**
@@ -17,15 +17,13 @@ export function useCarousel<T extends any[]>(
    */
   function changeSlide(direction: 'next' | 'prev') {
     return function () {
+      const currentIndex = index.current
       let nextIndex = currentIndex + (direction === 'next' ? 1 : -1)
       nextIndex = nextIndex < 0 ? data.length - 1 : nextIndex
-      setCurrentIndex(nextIndex)
+      index.current = nextIndex
+      setSelectedSlide(data[index.current])
     }
   }
 
-  useEffect(() => {
-    setSelectedSlide(data[currentIndex])
-  }, [currentIndex, data])
-
-  return { selectedSlide, changeSlide, currentIndex }
+  return { selectedSlide, changeSlide, currentIndex: index.current }
 }
