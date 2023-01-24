@@ -1,24 +1,35 @@
-import { cx } from 'class-variance-authority'
+'use client'
 import Image from 'next/image'
+import { cx } from 'class-variance-authority'
 
+import { Auction } from '@/types/auctions'
+import { EthereumPrice } from '@/types/prices'
+
+import { Heading } from '@/ui/Heading/Heading'
 import { Avatar } from '@/ui/Avatar/Avatar'
 import { Button } from '@/ui/Button/Button'
-import { Container } from '@/ui/Container/Container'
-import { Heading } from '@/ui/Heading/Heading'
 import { Icon } from '@/ui/Icon/Icon'
-
-import { popularAuctions, ethereumPrice } from '@/dummyData'
+import { Container } from '@/ui/Container/Container'
 
 import styles from './PopularAuctions.module.css'
+import { useCarousel } from '@/hooks/useCarousel'
+import { getTimeLeft } from '@/lib/time'
 
-export function PopularAuctions() {
-  const firstAuction = popularAuctions[0]
+export function PopularAuctions({
+  data,
+}: {
+  data: [Auction[], EthereumPrice]
+}) {
+  const [auctions, ethereumPrice] = data
+  const { selectedSlide, changeSlide, currentIndex } =
+    useCarousel<Auction[]>(auctions)
 
+  const { hours, minutes, seconds } = getTimeLeft(selectedSlide.endsAt)
   return (
     <Container as="section" className={styles.popularAuctions}>
       <picture className={styles.image}>
         <Image
-          src={firstAuction.media.image}
+          src={selectedSlide.media.image}
           alt=""
           fill
           sizes="(max-width: 768px) 100vw,
@@ -33,18 +44,18 @@ export function PopularAuctions() {
       <div className={styles.auctionData}>
         <div>
           <Heading as="h3" size="6xl" className={styles.title}>
-            The {getLastName(firstAuction.author)} Network ®
+            The {getLastName(selectedSlide.author)} Network ®
           </Heading>
           <div className={styles.authorAndPrice}>
             <div className={styles.box}>
               <Avatar
-                src={firstAuction.authorAvatar}
-                alt={firstAuction.author}
+                src={selectedSlide.authorAvatar}
+                alt={selectedSlide.author}
               />
               <div className={styles.boxData}>
                 <div className={styles.topTitle}>Creator</div>
                 <Heading as="h4" size="sm" className={styles.bottomTitle}>
-                  {firstAuction.author}
+                  {selectedSlide.author}
                 </Heading>
               </div>
             </div>
@@ -59,7 +70,7 @@ export function PopularAuctions() {
               <div className={styles.boxData}>
                 <div className={styles.topTitle}>Instant price</div>
                 <Heading as="h4" size="sm" className={styles.bottomTitle}>
-                  {firstAuction.instantPrice}
+                  {selectedSlide.instantPrice}
                 </Heading>
               </div>
             </div>
@@ -70,25 +81,25 @@ export function PopularAuctions() {
           <div>
             <div className={styles.auctionStatusTitle}>Current Bid</div>
             <Heading as="h4" size="5xl">
-              {firstAuction.highestBid}
+              {selectedSlide.highestBid}
             </Heading>
             <Heading as="h5" size="2xl" className={styles.priceUsd}>
-              $ {ethereumPrice.usd}
+              $ {fromEthToUsd(selectedSlide.highestBid, ethereumPrice.usd)}
             </Heading>
           </div>
           <div>
             <div className={styles.auctionStatusTitle}>Auction ending in</div>
             <div className={styles.timer}>
               <div className={styles.time}>
-                <div className={styles.timeValue}>19</div>
+                <div className={styles.timeValue}>{hours}</div>
                 <div className={styles.timeUnit}>Hrs</div>
               </div>
               <div className={styles.time}>
-                <div className={styles.timeValue}>24</div>
+                <div className={styles.timeValue}>{minutes}</div>
                 <div className={styles.timeUnit}>mins</div>
               </div>
               <div className={styles.time}>
-                <div className={styles.timeValue}>19</div>
+                <div className={styles.timeValue}>{seconds}</div>
                 <div className={styles.timeUnit}>secs</div>
               </div>
             </div>
@@ -103,12 +114,24 @@ export function PopularAuctions() {
         <div className={styles.navigation}>
           <Button
             intent="icon"
-            className={cx(styles.arrow, styles.disabled)}
+            className={cx(
+              styles.arrow,
+              currentIndex === 0 ? styles.disabled : '',
+            )}
             title="Previous Auction"
+            onClick={changeSlide('prev')}
           >
             <Icon name="arrowLeft" />
           </Button>
-          <Button intent="icon" className={styles.arrow} title="Next Auction">
+          <Button
+            intent="icon"
+            className={cx(
+              styles.arrow,
+              currentIndex === auctions.length - 1 ? styles.disabled : '',
+            )}
+            title="Next Auction"
+            onClick={changeSlide('next')}
+          >
             <Icon name="arrowRight" />
           </Button>
         </div>
@@ -118,5 +141,16 @@ export function PopularAuctions() {
 }
 
 function getLastName(name: string) {
+  // name is formatted as 'First Last'
   return name.split(' ').pop()
+}
+
+function fromEthToUsd(eth: string, usdOneEth: string) {
+  // eth is formatted as 'xxxx ETH'
+  let ethNumber = Number(eth.split(' ')[0])
+  // usd is formatted as 'x,xxx.xx'
+  let usdNumber = Number(usdOneEth.replace(',', ''))
+
+  let total = ethNumber * usdNumber
+  return total.toFixed(2)
 }
