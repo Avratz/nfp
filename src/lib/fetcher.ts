@@ -5,17 +5,24 @@ type FetcherCacheType = {
 
 type FetcherConfigType = {
   method?: 'GET' | 'POST'
-  apiKey: string
+  apiKey?: string
   cache?: FetcherCacheType
   body?: {}
+  baseUrl?: string
 }
 
 export async function fetcher<T>(
   url: string,
-  { method = 'GET', apiKey, cache = {}, body = {} }: FetcherConfigType,
+  {
+    method = 'GET',
+    apiKey = '',
+    cache = {},
+    body = {},
+    baseUrl = 'api',
+  }: FetcherConfigType,
 ) {
   try {
-    const res = await fetch(process.env.API_URL + url, {
+    const res = await fetch((process.env.API_URL || baseUrl) + url, {
       method,
       ...(method === 'POST' ? { body: JSON.stringify(body) } : {}),
       cache: cache.cache,

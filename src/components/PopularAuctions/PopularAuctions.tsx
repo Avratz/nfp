@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { cx } from 'class-variance-authority'
 
 import { Auction } from '@/types/auctions'
-import { EthereumPrice } from '@/types/prices'
 
 import { Heading } from '@/ui/Heading/Heading'
 import { Avatar } from '@/ui/Avatar/Avatar'
@@ -13,18 +12,23 @@ import { Container } from '@/ui/Container/Container'
 
 import styles from './PopularAuctions.module.css'
 import { useCarousel } from '@/hooks/useCarousel'
-import { getTimeLeft } from '@/lib/time'
+import { PopularAuctionsStatus } from '../PopularAuctionsStatus/PopularAuctionsStatus'
 
-export function PopularAuctions({
-  data,
-}: {
-  data: [Auction[], EthereumPrice]
-}) {
-  const [auctions, ethereumPrice] = data
+// this is overkill, but it's an example of how to use '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      cacheTime: 0,
+    },
+  },
+})
+
+export function PopularAuctions({ data }: { data: [Auction[]] }) {
+  const [auctions] = data
   const { selectedSlide, changeSlide, currentIndex } =
     useCarousel<Auction[]>(auctions)
 
-  const { hours, minutes, seconds } = getTimeLeft(selectedSlide.endsAt)
   return (
     <Container as="section" className={styles.popularAuctions}>
       <picture className={styles.image}>
@@ -77,34 +81,9 @@ export function PopularAuctions({
           </div>
         </div>
 
-        <div className={styles.auctionStatus}>
-          <div>
-            <div className={styles.auctionStatusTitle}>Current Bid</div>
-            <Heading as="h4" size="5xl">
-              {selectedSlide.highestBid}
-            </Heading>
-            <Heading as="h5" size="2xl" className={styles.priceUsd}>
-              $ {fromEthToUsd(selectedSlide.highestBid, ethereumPrice.usd)}
-            </Heading>
-          </div>
-          <div>
-            <div className={styles.auctionStatusTitle}>Auction ending in</div>
-            <div className={styles.timer}>
-              <div className={styles.time}>
-                <div className={styles.timeValue}>{hours}</div>
-                <div className={styles.timeUnit}>Hrs</div>
-              </div>
-              <div className={styles.time}>
-                <div className={styles.timeValue}>{minutes}</div>
-                <div className={styles.timeUnit}>mins</div>
-              </div>
-              <div className={styles.time}>
-                <div className={styles.timeValue}>{seconds}</div>
-                <div className={styles.timeUnit}>secs</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <QueryClientProvider client={queryClient}>
+          <PopularAuctionsStatus selectedSlide={selectedSlide} />
+        </QueryClientProvider>
 
         <div className={styles.auctionButtons}>
           <Button intent="accent">Place a bid</Button>
@@ -143,14 +122,4 @@ export function PopularAuctions({
 function getLastName(name: string) {
   // name is formatted as 'First Last'
   return name.split(' ').pop()
-}
-
-function fromEthToUsd(eth: string, usdOneEth: string) {
-  // eth is formatted as 'xxxx ETH'
-  let ethNumber = Number(eth.split(' ')[0])
-  // usd is formatted as 'x,xxx.xx'
-  let usdNumber = Number(usdOneEth.replace(',', ''))
-
-  let total = ethNumber * usdNumber
-  return total.toFixed(2)
 }

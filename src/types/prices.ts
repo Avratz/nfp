@@ -1,4 +1,4 @@
 export type EthereumPrice = {
-  eth: string
-  usd: string
+  eth: number
+  usd: number
 }

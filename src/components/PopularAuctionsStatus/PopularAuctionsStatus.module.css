@@ -1,0 +1,63 @@
+.auctionStatus {
+  background-color: var(--neutral-2);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  gap: 1.5rem;
+  box-shadow: 0 4rem 4rem -3rem rgba(31, 47, 70, 0.12);
+}
+
+.auctionStatusTitle {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-medium);
+  padding-bottom: 0.25rem;
+}
+
+.priceUsd {
+  padding-top: 0.25rem;
+  color: var(--neutral-4);
+}
+
+.timer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.25rem;
+}
+
+.timeValue {
+  font-family: var(--font-dmSans);
+  font-weight: var(--font-bold);
+  font-size: var(--text-4xl);
+  line-height: var(--line-4xl);
+}
+
+.timeUnit {
+  font-family: var(--font-poppins);
+  font-weight: var(--font-medium);
+  color: var(--neutral-4);
+}
+
+.skeleton {
+  margin: 0.5rem auto 0;
+  background-color: var(--neutral-5);
+  padding: 0.75rem 0;
+  width: 30%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

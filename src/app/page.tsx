@@ -5,13 +5,11 @@ import { SearchAuctions } from '@/components/SearchAuctions/SearchAuctions'
 import { withData } from '@/HOC/withData'
 
 import { getPopularAuctions } from '@/api/auctions'
-import { getEthereumPrice } from '@/api/coinPrices'
 import { Auction } from '@/types/auctions'
-import { EthereumPrice } from '@/types/prices'
 
 type PopularAuctionsDataProps = {
-  data: [Auction[], EthereumPrice]
-  requests: [() => Promise<Auction[]>, () => Promise<EthereumPrice>]
+  data: [Auction[]]
+  requests: [() => Promise<Auction[]>]
 }
 const PopularAuctionsData = withData<PopularAuctionsDataProps>(PopularAuctions)
 
@@ -23,9 +21,7 @@ export default async function Home() {
         {
           // @ts-expect-error: Return type 'Promise<Element>' is not a valid JSX element.
           // Async components are not supported yet.
-          <PopularAuctionsData
-            requests={[getPopularAuctions, getEthereumPrice]}
-          />
+          <PopularAuctionsData requests={[getPopularAuctions]} />
         }
       </Suspense>
       <SearchAuctions />

@@ -1,9 +1,13 @@
-import { getWithCacheRevalidationIn } from '@/lib/fetcher'
+import { fetcher } from '@/lib/fetcher'
 import { EthereumPrice } from '@/types/prices'
 
-export function getEthereumPrice(): Promise<EthereumPrice> {
-  return getWithCacheRevalidationIn(20)(
-    '/eth-price',
-    process.env.API_KEY as string,
-  )
+export function getEthereumPrice({
+  queryKey,
+}: {
+  queryKey: string[]
+}): Promise<EthereumPrice> {
+  const [_key, coin] = queryKey
+  return fetcher('/coin-prices?coin=' + coin, {
+    baseUrl: 'api',
+  })
 }
