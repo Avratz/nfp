@@ -8,6 +8,8 @@ import Search from '@/assets/icons/search.svg'
 import Candlesticks from '@/assets/icons/candlesticks.svg'
 import CloseCircle from '@/assets/icons/close-circle.svg'
 import Loading from '@/assets/icons/loading.svg'
+import Scatter from '@/assets/icons/scatter.svg'
+import Heart from '@/assets/icons/heart.svg'
 
 import styles from './Icon.module.css'
 
@@ -20,6 +22,8 @@ const icons = {
   candlesticks: Candlesticks,
   closeCircle: CloseCircle,
   loading: Loading,
+  scatter: Scatter,
+  heart: Heart,
 }
 
 const iconStyle = cva(styles.icon, {
