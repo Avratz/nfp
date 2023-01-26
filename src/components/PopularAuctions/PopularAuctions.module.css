@@ -36,14 +36,7 @@
   height: 40px;
   position: relative;
   border-radius: 50%;
-}
-
-.priceIcon {
   background-color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
 }
 
 .title {

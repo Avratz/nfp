@@ -1,10 +1,13 @@
+import Image from 'next/image'
+import { useDeferredValue } from 'react'
+
 import { useSearchAuctions } from '@/hooks/useSearchAuctionsContext'
+
 import { Button } from '@/ui/Button/Button'
 import { Heading } from '@/ui/Heading/Heading'
 import { Icon } from '@/ui/Icon/Icon'
-import Image from 'next/image'
-import { useDeferredValue } from 'react'
-import { AuctionCard } from '../AuctionCard/AuctionCard'
+
+import { AuctionCard } from '@/components/AuctionCard/AuctionCard'
 
 import styles from './SearchAuctionsList.module.css'
 
@@ -30,9 +33,9 @@ export function SearchAuctionsList() {
               author={auction.author}
               instantPrice={auction.instantPrice}
               stock={auction.stock}
-              authorAvatar={auction.authorAvatar}
               highestBid={auction.highestBid}
               bidUsers={auction.bidUsers}
+              attributeType={auction.attributes.type}
             />
           ))
         )}

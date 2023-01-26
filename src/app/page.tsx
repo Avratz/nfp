@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <main>
       <Hero />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={null}>
         {
           // @ts-expect-error: Return type 'Promise<Element>' is not a valid JSX element.
           // Async components are not supported yet.
@@ -28,7 +28,7 @@ export default async function Home() {
         }
       </Suspense>
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={null}>
         {
           // @ts-expect-error: Return type 'Promise<Element>' is not a valid JSX element.
           // Async components are not supported yet.

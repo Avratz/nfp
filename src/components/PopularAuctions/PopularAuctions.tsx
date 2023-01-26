@@ -16,6 +16,7 @@ import { PopularAuctionsStatus } from '../PopularAuctionsStatus/PopularAuctionsS
 
 // this is overkill, but it's an example of how to use '@tanstack/react-query'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { motion } from 'framer-motion'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -31,7 +32,23 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
 
   return (
     <Container as="section" className={styles.popularAuctions}>
-      <picture className={styles.image}>
+      <motion.picture
+        className={styles.image}
+        initial={{
+          x: 0,
+          y: 50,
+          opacity: 0,
+        }}
+        whileInView={{ opacity: 1 }}
+        animate={{
+          x: 0,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: 'easeIn',
+        }}
+      >
         <Image
           src={selectedSlide.media.image}
           alt=""
@@ -43,9 +60,26 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
           }}
           priority
         />
-      </picture>
+      </motion.picture>
 
-      <div className={styles.auctionData}>
+      <motion.div
+        className={styles.auctionData}
+        initial={{
+          x: 0,
+          y: 50,
+          opacity: 0,
+        }}
+        whileInView={{ opacity: 1 }}
+        animate={{
+          x: 0,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: 'easeIn',
+          delay: 0.1,
+        }}
+      >
         <div>
           <Heading as="h3" size="6xl" className={styles.title}>
             The {getLastName(selectedSlide.author)} Network ®
@@ -114,7 +148,7 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
             <Icon name="arrowRight" />
           </Button>
         </div>
-      </div>
+      </motion.div>
     </Container>
   )
 }

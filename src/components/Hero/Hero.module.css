@@ -10,6 +10,7 @@
   text-transform: uppercase;
   font-size: var(--text-2xs);
   line-height: var(--line-2xs);
+  animation: var(--fadeInLong);
 }
 
 .title {
@@ -17,10 +18,14 @@
   letter-spacing: -0.5px;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  animation: var(--fadeInLong);
 }
 
 .exploreButton {
   border-color: var(--neutral-4);
+  animation: var(--fadeInLong);
 }
 
 @media screen and (min-width: 768px) {

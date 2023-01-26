@@ -1,14 +1,16 @@
 'use client'
+import { useTransition } from 'react'
+
 import {
   useDispatch,
   useSearchAuctions,
 } from '@/hooks/useSearchAuctionsContext'
+
 import { Divider } from '@/ui/Divider/Divider'
 import { Input } from '@/ui/Input/Input'
 import { OptionBox, SelectBox } from '@/ui/SelectBox/SelectBox'
 import { ToggleButton } from '@/ui/ToggleButton/ToggleButton'
 import { ToggleButtonGroup } from '@/ui/ToggleButtonGroup/ToggleButtonGroup'
-import { useTransition } from 'react'
 
 import styles from './SearchAuctionsHeader.module.css'
 

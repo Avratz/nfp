@@ -1,8 +1,12 @@
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+
 import { Avatar } from '@/ui/Avatar/Avatar'
+import { Button } from '@/ui/Button/Button'
 import { Divider } from '@/ui/Divider/Divider'
 import { Heading } from '@/ui/Heading/Heading'
 import { Icon } from '@/ui/Icon/Icon'
-import Image from 'next/image'
+import { Badge } from '@/ui/Badge/Badge'
 
 import styles from './AuctionCard.module.css'
 
@@ -11,13 +15,13 @@ type AuctionCardProps = {
   author: string
   instantPrice: string
   stock: number
-  authorAvatar: string
   highestBid: string
   bidUsers?: {
     name: string
     avatar: string
     id: number
   }[]
+  attributeType: string
 }
 
 export function AuctionCard({
@@ -25,13 +29,34 @@ export function AuctionCard({
   author,
   instantPrice,
   stock,
-  authorAvatar,
   highestBid,
   bidUsers = [],
+  attributeType,
 }: AuctionCardProps) {
   return (
-    <article className={styles.auctionCard}>
+    <motion.article
+      className={styles.auctionCard}
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: 'easeIn',
+      }}
+    >
       <picture className={styles.image}>
+        <div className={styles.layerOver}>
+          <div className={styles.auctionInfoHover}>
+            <Badge>{attributeType}</Badge>
+            <Button intent="icon" className={styles.heartButton}>
+              <Icon name="heart" />
+            </Button>
+          </div>
+          <Button intent="accent" className={styles.placeABidBtn}>
+            <span>Place a bid</span> <Icon name="scatter" />
+          </Button>
+        </div>
         <Image
           src={image}
           alt=""
@@ -49,7 +74,7 @@ export function AuctionCard({
           <Heading as="h3" className={styles.title}>
             {author} NFT
           </Heading>
-          <span className={styles.instantPrice}>{instantPrice}</span>
+          <Badge variant="outline">{instantPrice}</Badge>
         </header>
         <div className={styles.stock}>
           <span className={styles.stockAvatars}>
@@ -69,6 +94,6 @@ export function AuctionCard({
           <span>New bid 🔥</span>
         </div>
       </div>
-    </article>
+    </motion.article>
   )
 }
