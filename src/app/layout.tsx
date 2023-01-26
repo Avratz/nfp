@@ -6,6 +6,7 @@ import '@/styles/variables.css'
 import '@/styles/globals.css'
 import { DM_Sans, Poppins } from '@next/font/google'
 import { cx } from 'class-variance-authority'
+import PWA from '@/components/PWA/PWA'
 
 const dmSans = DM_Sans({
   weight: '700',
@@ -32,6 +33,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      {process.env.NODE_ENV === 'production' ? <PWA /> : null}
     </html>
   )
 }

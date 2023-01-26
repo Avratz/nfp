@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "WebWorker",
+      "ESNext"
+    ],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "outDir": "./public",
+    "isolatedModules": false,
+  },
+  "include": ["./src/sw.ts"],
+}
+

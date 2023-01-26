@@ -1,0 +1,23 @@
+{
+  "short_name": "NFP",
+  "name": "NFPaisanos Challenge",
+  "description": "NFPaisanos: Create, explore and sell digital art nfts.",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "#141416",
+  "background_color": "#141416"
+}
