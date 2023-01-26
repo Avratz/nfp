@@ -1,0 +1,23 @@
+.badge {
+  border: 2px solid;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  font-size: var(--text-xs);
+  line-height: var(--line-xs);
+  border-radius: 0.25rem;
+  padding: 0.375rem;
+  padding-top: 0.28rem;
+  padding-bottom: 0.13rem;
+}
+
+.outline {
+  color: var(--green);
+  background-color: transparent;
+  border-color: var(--green);
+}
+
+.solid {
+  color: var(--neutral-8);
+  background-color: var(--green);
+  border-color: var(--green);
+}
