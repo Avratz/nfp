@@ -13,6 +13,41 @@
   line-height: var(--line-sm);
 }
 
+.option {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.all {
+  border: 2px solid var(--accent);
+}
+.all-text {
+  color: var(--accent);
+}
+
+.black {
+  background-color: var(--black);
+}
+.pink {
+  background-color: var(--pink);
+}
+.orange {
+  background-color: var(--orange);
+}
+.blue {
+  background-color: var(--blue);
+}
+.red {
+  background-color: var(--red);
+}
+
 @media screen and (min-width: 768px) {
   .searchAuctionsSidebar {
     width: 40%;
@@ -23,5 +58,8 @@
 @media screen and (min-width: 1200px) {
   .searchAuctionsSidebar {
     width: 20%;
+    position: sticky;
+    top: 120px;
+    height: min-content;
   }
 }

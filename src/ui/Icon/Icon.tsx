@@ -7,6 +7,7 @@ import ArrowRight from '@/assets/icons/right-arrow.svg'
 import Search from '@/assets/icons/search.svg'
 import Candlesticks from '@/assets/icons/candlesticks.svg'
 import CloseCircle from '@/assets/icons/close-circle.svg'
+import Loading from '@/assets/icons/loading.svg'
 
 import styles from './Icon.module.css'
 
@@ -18,6 +19,7 @@ const icons = {
   search: Search,
   candlesticks: Candlesticks,
   closeCircle: CloseCircle,
+  loading: Loading,
 }
 
 const iconStyle = cva(styles.icon, {

@@ -1,32 +1,25 @@
 'use client'
-import { popularAuctions } from '@/dummyData'
 import { Container } from '@/ui/Container/Container'
-import { AuctionCard } from '@/components/AuctionCard/AuctionCard'
 import { SearchAuctionsHeader } from '@/components/SearchAuctionsHeader/SearchAuctionsHeader'
 import { SearchAuctionsSidebar } from '@/components/SearchAuctionsSidebar/SearchAuctionsSidebar'
+import { SearchAuctionsList } from '@/components/SearchAuctionsList/SearchAuctionsList'
+
+import { SearchAuctionsProvider } from '@/context/SearchAuctionsContext'
+import { Auction } from '@/types/auctions'
 
 import styles from './SearchAuctions.module.css'
 
-export function SearchAuctions() {
+export function SearchAuctions({ data }: { data: [Auction[]] }) {
+  const [allAuctions] = data
   return (
     <Container as="section" className={styles.container}>
-      <SearchAuctionsHeader />
-      <div className={styles.searchContainer}>
-        <SearchAuctionsSidebar />
-        <div className={styles.auctionCards}>
-          {popularAuctions.map((auction) => (
-            <AuctionCard
-              key={auction.id}
-              image={auction.media.image}
-              author={auction.author}
-              instantPrice={auction.instantPrice}
-              stock={auction.stock}
-              authorAvatar={auction.authorAvatar}
-              highestBid={auction.highestBid}
-            />
-          ))}
+      <SearchAuctionsProvider allAuctions={allAuctions}>
+        <SearchAuctionsHeader />
+        <div className={styles.searchContainer}>
+          <SearchAuctionsSidebar />
+          <SearchAuctionsList />
         </div>
-      </div>
+      </SearchAuctionsProvider>
     </Container>
   )
 }

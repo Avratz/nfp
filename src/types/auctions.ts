@@ -16,7 +16,7 @@ export type Auction = {
   }
   attributes: {
     id: number
-    color: string
+    color: 'black' | 'pink' | 'orange' | 'blue' | 'red'
     type: string
   }
   bidUsers: [

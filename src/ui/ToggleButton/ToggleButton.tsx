@@ -11,16 +11,13 @@ type ToggleButtonProps = {
 
 export function ToggleButton({ value, children }: ToggleButtonProps) {
   return (
-    <RadioGroup.Option value={value}>
-      {({ active, checked }) => {
-        return (
-          <span
-            className={cx(styles.toggleButton, checked ? styles.checked : '')}
-          >
-            {children}
-          </span>
-        )
-      }}
+    <RadioGroup.Option
+      value={value}
+      className={({ checked }) =>
+        cx(styles.toggleButton, checked ? styles.checked : '')
+      }
+    >
+      {children}
     </RadioGroup.Option>
   )
 }

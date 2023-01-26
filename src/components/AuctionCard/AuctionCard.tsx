@@ -13,6 +13,11 @@ type AuctionCardProps = {
   stock: number
   authorAvatar: string
   highestBid: string
+  bidUsers?: {
+    name: string
+    avatar: string
+    id: number
+  }[]
 }
 
 export function AuctionCard({
@@ -22,6 +27,7 @@ export function AuctionCard({
   stock,
   authorAvatar,
   highestBid,
+  bidUsers = [],
 }: AuctionCardProps) {
   return (
     <article className={styles.auctionCard}>
@@ -30,11 +36,12 @@ export function AuctionCard({
           src={image}
           alt=""
           fill
-          sizes="(max-width: 768px) 100vw,
-              33vw"
+          sizes="(max-width: 768px) 40vw,
+              15vw"
           style={{
             objectFit: 'cover',
           }}
+          quality={65}
         />
       </picture>
       <div className={styles.auctionCardData}>
@@ -46,8 +53,8 @@ export function AuctionCard({
         </header>
         <div className={styles.stock}>
           <span className={styles.stockAvatars}>
-            {Array.from({ length: stock }).map((_, index) => (
-              <Avatar src={authorAvatar} size="small" key={index} />
+            {bidUsers.map(({ avatar, id }) => (
+              <Avatar src={avatar} size="small" key={id} />
             ))}
           </span>
           <span className={styles.stockValue}>{stock} in stock</span>

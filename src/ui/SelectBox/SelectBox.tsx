@@ -8,8 +8,8 @@ import styles from './SelectBox.module.css'
 
 type SelectBoxProps = {
   placeholder: string
-  selected?: { name: string }
-  setSelected: (selected: { name: string }) => void
+  selected?: { name: string; value: string }
+  setSelected: (selected: { name: string; value: string }) => void
   children: ReactNode
   label?: string
   className?: string
@@ -42,4 +42,28 @@ export function SelectBox({
   )
 }
 
-SelectBox.Option = Listbox.Option
+export function OptionBox({
+  children,
+  value,
+  className = '',
+}: {
+  children: ReactNode
+  value: { name: string; value: string }
+  className?: string
+}) {
+  return (
+    <Listbox.Option
+      value={value}
+      className={({ active, selected }) =>
+        cx(
+          styles.option,
+          active && !selected ? styles.active : '',
+          selected ? styles.selected : '',
+          className,
+        )
+      }
+    >
+      {children}
+    </Listbox.Option>
+  )
+}

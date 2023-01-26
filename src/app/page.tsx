@@ -1,17 +1,20 @@
 import { Suspense } from 'react'
+
 import { Hero } from '@/components/Hero/Hero'
 import { PopularAuctions } from '@/components/PopularAuctions/PopularAuctions'
 import { SearchAuctions } from '@/components/SearchAuctions/SearchAuctions'
+
 import { withData } from '@/HOC/withData'
 
-import { getPopularAuctions } from '@/api/auctions'
+import { getPopularAuctions, getAllAuctions } from '@/api/auctions'
 import { Auction } from '@/types/auctions'
 
-type PopularAuctionsDataProps = {
+type HOCGetAuctionsProps = {
   data: [Auction[]]
   requests: [() => Promise<Auction[]>]
 }
-const PopularAuctionsData = withData<PopularAuctionsDataProps>(PopularAuctions)
+const PopularAuctionsData = withData<HOCGetAuctionsProps>(PopularAuctions)
+const SearchAuctionsData = withData<HOCGetAuctionsProps>(SearchAuctions)
 
 export default async function Home() {
   return (
@@ -24,7 +27,14 @@ export default async function Home() {
           <PopularAuctionsData requests={[getPopularAuctions]} />
         }
       </Suspense>
-      <SearchAuctions />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        {
+          // @ts-expect-error: Return type 'Promise<Element>' is not a valid JSX element.
+          // Async components are not supported yet.
+          <SearchAuctionsData requests={[getAllAuctions]} />
+        }
+      </Suspense>
     </main>
   )
 }

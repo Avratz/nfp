@@ -5,6 +5,7 @@
   font-size: var(--text-sm);
   padding: 0.3rem 0.75rem 0.25rem;
   display: inline-block;
+  cursor: pointer;
 }
 
 .checked {
