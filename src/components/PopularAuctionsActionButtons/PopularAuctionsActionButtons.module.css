@@ -10,6 +10,9 @@
   background-color: rgba(20, 20, 22, 0.95);
   box-shadow: 0 0.25rem 0.5rem var(--neutral-1);
   backdrop-filter: blur(7px);
+  max-width: 500px;
+  min-height: 90%;
+  width: 90%;
 }
 
 .modal,
@@ -19,11 +22,8 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 6rem 2rem;
   border-radius: 1rem;
   background-color: var(--neutral-1);
-  width: 90%;
-  max-width: 500px;
   position: relative;
 }
 
@@ -120,5 +120,11 @@
 @keyframes fill {
   100% {
     box-shadow: inset 0px 0px 0px 30px var(--neutral-8);
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    min-height: 500px;
   }
 }

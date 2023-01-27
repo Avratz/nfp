@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, Fragment, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
@@ -41,6 +41,7 @@ export function PopularAuctionsPlaceNewBid({
 }) {
   const { isOpen, setIsOpen } = useOverlay()
   const [isSuccess, setIsSuccess] = useState(false)
+
   function confirmBid(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
@@ -64,13 +65,13 @@ export function PopularAuctionsPlaceNewBid({
             onClick={(e) => e.stopPropagation()}
             onSubmit={confirmBid}
           >
-            <motion.div
-              className={styles.success}
-              initial={false}
-              animate={isSuccess ? 'open' : 'closed'}
-              variants={success}
-            >
-              {isSuccess ? (
+            {isSuccess ? (
+              <motion.div
+                className={styles.success}
+                initial={'closed'}
+                animate={isSuccess ? 'open' : 'closed'}
+                variants={success}
+              >
                 <div className={styles.checkmarkIconWrapper}>
                   <svg
                     className={styles.checkmark}
@@ -91,36 +92,46 @@ export function PopularAuctionsPlaceNewBid({
                     />
                   </svg>
                 </div>
-              ) : null}
-              <Heading as="h3" size="2xl">
-                Bid placed successfully!
-              </Heading>
-              <Button
-                intent="primary"
-                className={styles.finishButton}
-                onClick={closeModal}
-              >
-                Close
-              </Button>
-            </motion.div>
 
-            <Button
-              intent="icon"
-              onClick={closeModal}
-              className={styles.closeIcon}
-              title="Close modal"
-            >
-              <Icon name="closeCircle" size="medium" />
-            </Button>
-            <Heading as="h3" size="2xl">
-              Place a new bid
-            </Heading>
-            <p className={styles.modalText}>The current bid is {highestBid}</p>
-            <Input type="number" name="bid" />
-            <div className={styles.modalButtons}>
-              <Button intent="accent"> Confirm</Button>
-              <Button onClick={closeModal}>Cancel</Button>
-            </div>
+                <Heading as="h3" size="2xl">
+                  Bid placed successfully!
+                </Heading>
+
+                <Button
+                  intent="primary"
+                  className={styles.finishButton}
+                  onClick={closeModal}
+                  type="button"
+                >
+                  Close
+                </Button>
+              </motion.div>
+            ) : (
+              <Fragment>
+                <Button
+                  intent="icon"
+                  onClick={closeModal}
+                  className={styles.closeIcon}
+                  title="Close modal"
+                  type="button"
+                >
+                  <Icon name="closeCircle" size="medium" />
+                </Button>
+                <Heading as="h3" size="2xl">
+                  Place a new bid
+                </Heading>
+                <p className={styles.modalText}>
+                  The current bid is {highestBid}
+                </p>
+                <Input type="number" name="bid" required />
+                <div className={styles.modalButtons}>
+                  <Button intent="accent">Confirm</Button>
+                  <Button onClick={closeModal} type="button">
+                    Cancel
+                  </Button>
+                </div>
+              </Fragment>
+            )}
           </motion.form>
         </Modal>
       ) : null}

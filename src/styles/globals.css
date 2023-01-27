@@ -4,6 +4,10 @@ body {
   padding-top: 1.5rem;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 a,
 a:visited,
 a:hover {
