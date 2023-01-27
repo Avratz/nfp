@@ -6,10 +6,10 @@ import styles from './Modal.module.css'
 
 interface ModalProps {
   children: ReactNode
-  setIsOpen: (isOpen: boolean) => void
+  closeModal: () => void
 }
 
-export function Modal({ children, setIsOpen }: ModalProps) {
+export function Modal({ children, closeModal }: ModalProps) {
   const modalElement = useRef<Element | null>(null)
 
   if (!modalElement.current) {
@@ -30,7 +30,7 @@ export function Modal({ children, setIsOpen }: ModalProps) {
   }, [])
 
   return createPortal(
-    <div className={styles.overlay} onClick={() => setIsOpen(false)}>
+    <div className={styles.overlay} onClick={closeModal}>
       {children}
     </div>,
     modalElement.current,

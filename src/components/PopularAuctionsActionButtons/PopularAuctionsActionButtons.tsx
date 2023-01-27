@@ -58,7 +58,7 @@ export function PopularAuctionsPlaceNewBid({
   return (
     <div className={styles.auctionButtons}>
       {isOpen ? (
-        <Modal setIsOpen={setIsOpen}>
+        <Modal closeModal={closeModal}>
           <motion.form
             className={styles.modal}
             onClick={(e) => e.stopPropagation()}
