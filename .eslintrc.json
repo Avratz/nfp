@@ -1,4 +1,14 @@
 {
   "extends": "next/core-web-vitals",
-  "root": true
+  "root": true,
+  "plugins": ["testing-library"],
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
 }
