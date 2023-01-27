@@ -18,12 +18,12 @@ const Drawer = dynamic(
 import { Navbar } from '@/components/Navbar/Navbar'
 import { ButtonMenu } from '@/components/ButtonMenu/ButtonMenu'
 
-import { useMenu } from '@/hooks/useMenu'
+import { useOverlay } from '@/hooks/useOverlay'
 
 import styles from './Header.module.css'
 
 export function Header() {
-  const { isOpen, setIsOpen } = useMenu()
+  const { isOpen, setIsOpen } = useOverlay()
   return (
     <header className={styles.header}>
       <Container className={styles.headerContainer}>

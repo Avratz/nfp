@@ -1,22 +1,25 @@
 'use client'
 import Image from 'next/image'
+
 import { cx } from 'class-variance-authority'
+import { motion } from 'framer-motion'
 
+// this is overkill, but it's an example of how to use '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+import { useCarousel } from '@/hooks/useCarousel'
 import { Auction } from '@/types/auctions'
-
 import { Heading } from '@/ui/Heading/Heading'
 import { Avatar } from '@/ui/Avatar/Avatar'
 import { Button } from '@/ui/Button/Button'
 import { Icon } from '@/ui/Icon/Icon'
 import { Container } from '@/ui/Container/Container'
 
-import styles from './PopularAuctions.module.css'
-import { useCarousel } from '@/hooks/useCarousel'
-import { PopularAuctionsStatus } from '../PopularAuctionsStatus/PopularAuctionsStatus'
+import { PopularAuctionsStatus } from '@/components/PopularAuctionsStatus/PopularAuctionsStatus'
+import { PopularAuctionsPlaceNewBid } from '@/components/PopularAuctionsActionButtons/PopularAuctionsActionButtons'
 
-// this is overkill, but it's an example of how to use '@tanstack/react-query'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { motion } from 'framer-motion'
+import styles from './PopularAuctions.module.css'
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -25,6 +28,25 @@ const queryClient = new QueryClient({
   },
 })
 
+let animationDefault = {
+  initial: {
+    x: 0,
+    y: 50,
+    opacity: 0,
+  },
+  whileInView: {
+    opacity: 1,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+  },
+  transition: {
+    duration: 0.3,
+    ease: 'easeIn',
+  },
+}
+
 export function PopularAuctions({ data }: { data: [Auction[]] }) {
   const [auctions] = data
   const { selectedSlide, changeSlide, currentIndex } =
@@ -32,23 +54,7 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
 
   return (
     <Container as="section" className={styles.popularAuctions}>
-      <motion.picture
-        className={styles.image}
-        initial={{
-          x: 0,
-          y: 50,
-          opacity: 0,
-        }}
-        whileInView={{ opacity: 1 }}
-        animate={{
-          x: 0,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.3,
-          ease: 'easeIn',
-        }}
-      >
+      <motion.picture className={styles.image} {...animationDefault}>
         <Image
           src={selectedSlide.media.image}
           alt=""
@@ -62,24 +68,7 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
         />
       </motion.picture>
 
-      <motion.div
-        className={styles.auctionData}
-        initial={{
-          x: 0,
-          y: 50,
-          opacity: 0,
-        }}
-        whileInView={{ opacity: 1 }}
-        animate={{
-          x: 0,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.3,
-          ease: 'easeIn',
-          delay: 0.1,
-        }}
-      >
+      <motion.div className={styles.auctionData} {...animationDefault}>
         <div>
           <Heading as="h3" size="6xl" className={styles.title}>
             The {getLastName(selectedSlide.author)} Network ®
@@ -119,10 +108,7 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
           <PopularAuctionsStatus selectedSlide={selectedSlide} />
         </QueryClientProvider>
 
-        <div className={styles.auctionButtons}>
-          <Button intent="accent">Place a bid</Button>
-          <Button intent="primary">View item</Button>
-        </div>
+        <PopularAuctionsPlaceNewBid highestBid={selectedSlide.highestBid} />
 
         <div className={styles.navigation}>
           <Button

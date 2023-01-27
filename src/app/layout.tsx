@@ -32,6 +32,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <div id="modal"></div>
       </body>
       {process.env.NODE_ENV === 'production' ? <PWA /> : null}
     </html>

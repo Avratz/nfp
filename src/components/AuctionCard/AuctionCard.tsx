@@ -49,7 +49,7 @@ export function AuctionCard({
         <div className={styles.layerOver}>
           <div className={styles.auctionInfoHover}>
             <Badge>{attributeType}</Badge>
-            <Button intent="icon" className={styles.heartButton}>
+            <Button intent="icon" className={styles.heartButton} title="Like">
               <Icon name="heart" />
             </Button>
           </div>

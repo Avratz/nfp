@@ -51,7 +51,11 @@ export function Input({
             className={inputStyles({
               intent,
               className: cx(
-                icon?.slot === 'left' ? styles.inputLeft : styles.inputRight,
+                icon?.slot === 'left'
+                  ? styles.inputLeft
+                  : icon?.slot === 'right'
+                  ? styles.inputRight
+                  : null,
                 className,
               ),
             })}
