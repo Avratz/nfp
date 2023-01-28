@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders Header unchanged 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="headerContainer container containerPadding"
+    >
+      <a
+        class="link logo"
+        href="/"
+      >
+        <picture
+          class="isotipo"
+        />
+        <h1
+          class="heading 2xl inlineBlock heading"
+        >
+          NFPaisanos
+        </h1>
+      </a>
+      <nav
+        class="nav"
+      >
+        <hr
+          class="divider vertical"
+        />
+        <a
+          class="link link"
+          href="/"
+        >
+          Discover
+        </a>
+        <a
+          class="link link"
+          href="/"
+        >
+          What we do
+        </a>
+        <a
+          class="link button primary base button"
+          href="/"
+        >
+          Connect Wallet
+        </a>
+      </nav>
+      <nav
+        class="nav"
+        style="clip-path: inset(0% 0% 100% 0%);"
+      >
+        <div
+          class="navInner"
+        >
+          <h3
+            class="heading 2xl heading"
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            Menu
+          </h3>
+          <a
+            class="link link"
+            href="/"
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            Discover
+          </a>
+          <a
+            class="link link"
+            href="/"
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            What we do
+          </a>
+          <div
+            class="lineSeparation"
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          />
+          <h3
+            class="heading 2xl heading"
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            Connect
+          </h3>
+          <a
+            class="link button primaryDark base button"
+            href="/"
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            Connect Wallet
+          </a>
+        </div>
+      </nav>
+      <button
+        class="button icon base menuButton"
+        title="Menu"
+      >
+        <div
+          class="bar top"
+        />
+        <div
+          class="bar bottom"
+        />
+      </button>
+    </div>
+  </header>
+</div>
+`;

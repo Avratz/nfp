@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render accent 1`] = `
+<div>
+  <button
+    class="button accent base"
+  >
+    accent
+  </button>
+</div>
+`;
+
+exports[`Button should render default 1`] = `
+<div>
+  <button
+    class="button primary base"
+  >
+    default
+  </button>
+</div>
+`;
+
+exports[`Button should render primary 1`] = `
+<div>
+  <button
+    class="button primary base"
+  >
+    primary
+  </button>
+</div>
+`;
+
+exports[`Button should render primaryDark 1`] = `
+<div>
+  <button
+    class="button primaryDark base"
+  >
+    primaryDark
+  </button>
+</div>
+`;

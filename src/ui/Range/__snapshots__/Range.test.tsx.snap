@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Range renders default 1`] = `
+<div>
+  <label
+    class="rangeContainer"
+  >
+    <div
+      class="label"
+    />
+    <div
+      class="rangeBox"
+    >
+      <input
+        class="inputRange"
+        max="10"
+        min="5"
+        type="range"
+        value=""
+      />
+      <div
+        class="track"
+      />
+      <div
+        class="progress"
+      />
+      <div
+        class="dot"
+        style="left: 50%; transform: translateX(-50%);"
+      >
+        <div
+          class="tooltip"
+        >
+          5
+           ETH
+        </div>
+      </div>
+    </div>
+    <datalist
+      class="units"
+    >
+      <option
+        label="5 ETH"
+      />
+      <option
+        label="10 ETH"
+      />
+    </datalist>
+  </label>
+</div>
+`;
+
+exports[`Range renders with label 1`] = `
+<div>
+  <label
+    class="rangeContainer"
+  >
+    <div
+      class="label"
+    >
+      Range
+    </div>
+    <div
+      class="rangeBox"
+    >
+      <input
+        class="inputRange"
+        max="10"
+        min="5"
+        type="range"
+        value=""
+      />
+      <div
+        class="track"
+      />
+      <div
+        class="progress"
+      />
+      <div
+        class="dot"
+        style="left: 50%; transform: translateX(-50%);"
+      >
+        <div
+          class="tooltip"
+        >
+          5
+           ETH
+        </div>
+      </div>
+    </div>
+    <datalist
+      class="units"
+    >
+      <option
+        label="5 ETH"
+      />
+      <option
+        label="10 ETH"
+      />
+    </datalist>
+  </label>
+</div>
+`;

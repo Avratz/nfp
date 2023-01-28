@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders as h2 with size xl 1`] = `
+<div>
+  <h2
+    class="heading xl"
+  >
+    Heading
+  </h2>
+</div>
+`;
+
+exports[`Heading renders default 1`] = `
+<div>
+  <h1
+    class="heading base"
+  >
+    Heading
+  </h1>
+</div>
+`;

@@ -7,8 +7,8 @@ export type Auction = {
   type: string
   stock: number
   likes: number
-  createdAt: Date
-  endsAt: Date
+  createdAt: string
+  endsAt: string
   media: {
     id: number
     image: string
@@ -19,11 +19,9 @@ export type Auction = {
     color: 'black' | 'pink' | 'orange' | 'blue' | 'red'
     type: string
   }
-  bidUsers: [
-    {
-      id: number
-      name: string
-      avatar: string
-    },
-  ]
+  bidUsers: {
+    id: number
+    name: string
+    avatar: string
+  }[]
 }

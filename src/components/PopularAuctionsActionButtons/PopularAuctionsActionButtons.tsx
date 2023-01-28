@@ -1,4 +1,4 @@
-import { FormEvent, Fragment, useRef, useState } from 'react'
+import { FormEvent, Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
@@ -34,7 +34,7 @@ const success = {
   },
 }
 
-export function PopularAuctionsPlaceNewBid({
+export function PopularAuctionsActionButtons({
   highestBid,
 }: {
   highestBid: string

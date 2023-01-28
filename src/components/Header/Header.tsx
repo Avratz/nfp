@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic'
 import { Container } from '@/ui/Container/Container'
 
 import { Logo } from '@/components/Logo/Logo'
+import { Drawer } from '@/components/Drawer/Drawer'
+/*
 const Drawer = dynamic(
   async function () {
     return import('@/components/Drawer/Drawer').then((mod) => mod.Drawer)
@@ -15,6 +17,7 @@ const Drawer = dynamic(
     },
   },
 )
+*/
 import { Navbar } from '@/components/Navbar/Navbar'
 import { ButtonMenu } from '@/components/ButtonMenu/ButtonMenu'
 

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders outline 1`] = `
+<div>
+  <div
+    class="badge outline"
+  >
+    outline
+  </div>
+</div>
+`;
+
+exports[`Avatar renders solid 1`] = `
+<div>
+  <div
+    class="badge solid"
+  >
+    solid
+  </div>
+</div>
+`;

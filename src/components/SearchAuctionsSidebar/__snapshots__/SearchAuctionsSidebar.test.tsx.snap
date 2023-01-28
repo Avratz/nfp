@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchAuctionsSidebar renders SearchAuctionsSidebar 1`] = `
+<div>
+  <aside
+    class="searchAuctionsSidebar"
+  >
+    <label
+      class="rangeContainer"
+    >
+      <div
+        class="label"
+      >
+        Price Range
+      </div>
+      <div
+        class="rangeBox"
+      >
+        <input
+          class="inputRange"
+          max="10.05"
+          min="0.001"
+          step="0.001"
+          type="range"
+          value="10.05"
+        />
+        <div
+          class="track"
+        />
+        <div
+          class="progress"
+        />
+        <div
+          class="dot"
+          style="left: 100%; transform: translateX(-100%);"
+        >
+          <div
+            class="tooltip"
+          >
+            10.05
+             ETH
+          </div>
+        </div>
+      </div>
+      <datalist
+        class="units"
+      >
+        <option
+          label="0.001 ETH"
+        />
+        <option
+          label="10.05 ETH"
+        />
+      </datalist>
+    </label>
+    <hr
+      class="divider horizontal"
+    />
+    <div
+      class="selectBox"
+    >
+      <label
+        class="label"
+        data-headlessui-state=""
+        id="headlessui-listbox-label-:r0:"
+      >
+        Likes
+      </label>
+      <button
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="headlessui-listbox-label-:r0: headlessui-listbox-button-:r1:"
+        class="button"
+        data-headlessui-state=""
+        id="headlessui-listbox-button-:r1:"
+        type="button"
+      >
+        <span>
+          Most Liked
+        </span>
+        <span
+          class="icon"
+        >
+          <div />
+        </span>
+      </button>
+    </div>
+    <div
+      class="selectBox"
+    >
+      <label
+        class="label"
+        data-headlessui-state=""
+        id="headlessui-listbox-label-:r3:"
+      >
+        Colors
+      </label>
+      <button
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="headlessui-listbox-label-:r3: headlessui-listbox-button-:r4:"
+        class="button"
+        data-headlessui-state=""
+        id="headlessui-listbox-button-:r4:"
+        type="button"
+      >
+        <span>
+          All colors
+        </span>
+        <span
+          class="icon"
+        >
+          <div />
+        </span>
+      </button>
+    </div>
+    <hr
+      class="divider horizontal"
+    />
+    <button
+      class="button blank base resetButton"
+    >
+      <div />
+      <span>
+        Reset filter
+      </span>
+    </button>
+  </aside>
+</div>
+`;

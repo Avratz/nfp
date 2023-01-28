@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders Navbar 1`] = `
+<div>
+  <nav
+    class="nav"
+  >
+    <hr
+      class="divider vertical"
+    />
+    <a
+      class="link link"
+      href="/"
+    >
+      Discover
+    </a>
+    <a
+      class="link link"
+      href="/"
+    >
+      What we do
+    </a>
+    <a
+      class="link button primary base button"
+      href="/"
+    >
+      Connect Wallet
+    </a>
+  </nav>
+</div>
+`;

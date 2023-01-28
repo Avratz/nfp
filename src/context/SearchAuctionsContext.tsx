@@ -1,14 +1,5 @@
 import { Auction } from '@/types/auctions'
-import {
-  createContext,
-  ReactNode,
-  useDeferredValue,
-  useEffect,
-  useMemo,
-  useReducer,
-  useState,
-  useTransition,
-} from 'react'
+import { createContext, ReactNode, useMemo, useReducer } from 'react'
 import produce from 'immer'
 import { filterAuctions } from '@/lib/filters'
 
@@ -36,7 +27,7 @@ type Action = {
   }
 }
 
-const filtersInitialState: FiltersType = {
+export const filtersInitialState: FiltersType = {
   searchKey: '',
   orderBy: 'newest',
   category: 'all-items',
@@ -48,12 +39,34 @@ const filtersInitialState: FiltersType = {
 
 const initialState = {
   auctions: [] as Auction[],
+  allAuctionsMemoized: [] as Auction[],
   filters: filtersInitialState,
 }
 
 export const SearchAuctionsContext = createContext({
   state: initialState,
   dispatch: (action: Action) => {},
+})
+
+export const reducer = produce((draft: InitialStateType, action: Action) => {
+  const { type, payload } = action
+  switch (type) {
+    case 'RESET_FILTERS':
+      draft.filters = {
+        ...filtersInitialState,
+        reset: draft.filters.reset + 1,
+      }
+      draft.auctions = filterAuctions(draft.allAuctionsMemoized, draft.filters)
+    case 'CHANGE_FILTER':
+      draft.filters = {
+        ...draft.filters,
+        ...payload,
+      }
+      draft.auctions = filterAuctions(draft.allAuctionsMemoized, draft.filters)
+      return draft
+    default:
+      return draft
+  }
 })
 
 export function SearchAuctionsProvider({
@@ -64,30 +77,13 @@ export function SearchAuctionsProvider({
     () => filterAuctions(allAuctions, filtersInitialState),
     [allAuctions],
   )
-  const reducer = produce((draft: InitialStateType, action: Action) => {
-    const { type, payload } = action
-    switch (type) {
-      case 'RESET_FILTERS':
-        draft.filters = {
-          ...filtersInitialState,
-          reset: draft.filters.reset + 1,
-        }
-        draft.auctions = filterAuctions(allAuctionsMemoized, draft.filters)
-      case 'CHANGE_FILTER':
-        draft.filters = {
-          ...draft.filters,
-          ...payload,
-        }
-        draft.auctions = filterAuctions(allAuctionsMemoized, draft.filters)
-        return draft
-      default:
-        return draft
-    }
-  })
+
   const [state, dispatch] = useReducer(reducer, {
     ...initialState,
     auctions: allAuctionsMemoized,
+    allAuctionsMemoized,
   })
+
   return (
     <SearchAuctionsContext.Provider
       value={{

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders as section with no padding 1`] = `
+<div>
+  <section
+    class="container"
+  >
+    section no padding
+  </section>
+</div>
+`;
+
+exports[`Container renders default 1`] = `
+<div>
+  <div
+    class="container containerPadding"
+  >
+    Container
+  </div>
+</div>
+`;

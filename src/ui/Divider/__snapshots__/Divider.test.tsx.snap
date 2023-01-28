@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider renders default 1`] = `
+<div>
+  <hr
+    class="divider horizontal"
+  />
+</div>
+`;
+
+exports[`Divider renders vertical 1`] = `
+<div>
+  <hr
+    class="divider vertical"
+  />
+</div>
+`;

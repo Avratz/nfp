@@ -16,7 +16,7 @@ import { Icon } from '@/ui/Icon/Icon'
 import { Container } from '@/ui/Container/Container'
 
 import { PopularAuctionsStatus } from '@/components/PopularAuctionsStatus/PopularAuctionsStatus'
-import { PopularAuctionsPlaceNewBid } from '@/components/PopularAuctionsActionButtons/PopularAuctionsActionButtons'
+import { PopularAuctionsActionButtons } from '@/components/PopularAuctionsActionButtons/PopularAuctionsActionButtons'
 
 import styles from './PopularAuctions.module.css'
 
@@ -108,7 +108,7 @@ export function PopularAuctions({ data }: { data: [Auction[]] }) {
           <PopularAuctionsStatus selectedSlide={selectedSlide} />
         </QueryClientProvider>
 
-        <PopularAuctionsPlaceNewBid highestBid={selectedSlide.highestBid} />
+        <PopularAuctionsActionButtons highestBid={selectedSlide.highestBid} />
 
         <div className={styles.navigation}>
           <Button

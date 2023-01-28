@@ -3,10 +3,10 @@ export function timeFormat(value: number) {
   return String(formattedValue)
 }
 
-export function getTimeLeft(ending: Date) {
-  let starting = new Date()
-  ending = new Date(ending)
-  let timeLeftMS = ending.getTime() - starting.getTime()
+export function getTimeLeft(ending: string) {
+  let startingDate = new Date()
+  let endingDate = new Date(ending)
+  let timeLeftMS = endingDate.getTime() - startingDate.getTime()
   if (timeLeftMS < 0) {
     return {
       hours: '00',

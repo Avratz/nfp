@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo renders Logo 1`] = `
+<div>
+  <a
+    class="link logo"
+    href="/"
+  >
+    <picture
+      class="isotipo"
+    />
+    <h1
+      class="heading 2xl inlineBlock heading"
+    >
+      NFPaisanos
+    </h1>
+  </a>
+</div>
+`;

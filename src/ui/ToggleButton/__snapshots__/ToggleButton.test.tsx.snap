@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleButton renders default 1`] = `
+<div>
+  <div
+    id="headlessui-radiogroup-:r0:"
+    role="radiogroup"
+  >
+    <div
+      aria-checked="false"
+      class="toggleButton"
+      data-headlessui-state=""
+      id="headlessui-radiogroup-option-:r1:"
+      role="radio"
+      tabindex="0"
+    >
+      ToggleButton
+    </div>
+  </div>
+</div>
+`;

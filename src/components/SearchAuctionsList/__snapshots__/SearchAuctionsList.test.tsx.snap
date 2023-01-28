@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchAuctionsList renders SearchAuctionsList 1`] = `
+<div>
+  <div
+    class="auctionCardsContainer"
+  >
+    <div
+      class="auctionCards"
+    >
+      <div
+        class="noMatch"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="160"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Ferror.png&w=640&q=75"
+          srcset="/_next/image?url=%2Fimages%2Ferror.png&w=256&q=75 1x, /_next/image?url=%2Fimages%2Ferror.png&w=640&q=75 2x"
+          style="color: transparent;"
+          width="215"
+        />
+        <h3
+          class="heading 2xl"
+        >
+          Im terrible sorry about all this.
+        </h3>
+        <h4
+          class="heading base"
+        >
+          Please try again with another filter.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;

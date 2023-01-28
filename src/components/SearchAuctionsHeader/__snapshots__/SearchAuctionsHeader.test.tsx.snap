@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchAuctionsHeader renders SearchAuctionsHeader 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <label
+      class="inputLabel"
+      for=":r0:"
+    >
+      <div
+        class="inputWrapper"
+      >
+        <input
+          class="input base inputRight inputSearch"
+          id=":r0:"
+          placeholder="Type to find something nice..."
+          type="text"
+        />
+        <div />
+      </div>
+    </label>
+    <hr
+      class="divider horizontal divider"
+    />
+    <div
+      class="headerFilters"
+    >
+      <div
+        class="selectBox selectBox"
+      >
+        <button
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          class="button"
+          data-headlessui-state=""
+          id="headlessui-listbox-button-:r1:"
+          type="button"
+        >
+          <span>
+            Newest
+          </span>
+          <span
+            class="icon"
+          >
+            <div />
+          </span>
+        </button>
+      </div>
+      <div
+        class="toggleButtonGroup subNavigation"
+        id="headlessui-radiogroup-:r3:"
+        role="radiogroup"
+      >
+        <div
+          aria-checked="true"
+          class="toggleButton checked"
+          data-headlessui-state="checked"
+          id="headlessui-radiogroup-option-:r4:"
+          role="radio"
+          tabindex="0"
+        >
+          All Items
+        </div>
+        <div
+          aria-checked="false"
+          class="toggleButton"
+          data-headlessui-state=""
+          id="headlessui-radiogroup-option-:r5:"
+          role="radio"
+          tabindex="-1"
+        >
+          Art
+        </div>
+        <div
+          aria-checked="false"
+          class="toggleButton"
+          data-headlessui-state=""
+          id="headlessui-radiogroup-option-:r6:"
+          role="radio"
+          tabindex="-1"
+        >
+          Photography
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

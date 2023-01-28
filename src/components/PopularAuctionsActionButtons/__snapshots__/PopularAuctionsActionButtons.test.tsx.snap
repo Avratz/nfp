@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopularAuctionsActionButtons renders PopularAuctionsActionButtons 1`] = `
+<div>
+  <div
+    class="auctionButtons"
+  >
+    <button
+      class="button accent base"
+    >
+      Place a bid
+    </button>
+    <button
+      class="button primary base"
+    >
+      View item
+    </button>
+  </div>
+</div>
+`;

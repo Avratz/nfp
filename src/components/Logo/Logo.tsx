@@ -6,7 +6,7 @@ import { Heading } from '@/ui/Heading/Heading'
 
 import styles from './Logo.module.css'
 
-type LogoProps = {
+export type LogoProps = {
   className?: string
   dark?: boolean
   href?: string

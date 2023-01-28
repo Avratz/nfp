@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes, useEffect, useState } from 'react'
+import { ChangeEvent, InputHTMLAttributes, useState } from 'react'
 import styles from './Range.module.css'
 
 interface RangeProps extends InputHTMLAttributes<HTMLInputElement> {

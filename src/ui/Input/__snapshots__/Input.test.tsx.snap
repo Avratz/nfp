@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders default 1`] = `
+<div>
+  <label
+    class="inputLabel"
+    for=":r0:"
+  >
+    <div
+      class="inputWrapper"
+    >
+      <input
+        class="input base"
+        id=":r0:"
+        type="text"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Input renders with intent blank 1`] = `
+<div>
+  <label
+    class="inputLabel"
+    for=":r3:"
+  >
+    <div
+      class="inputWrapper"
+    >
+      <input
+        class="input blank"
+        id=":r3:"
+        type="text"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Input renders with label 1`] = `
+<div>
+  <label
+    class="inputLabel"
+    for=":r1:"
+  >
+    Label
+    <div
+      class="inputWrapper"
+    >
+      <input
+        class="input base"
+        id=":r1:"
+        type="text"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Input renders with placeholder 1`] = `
+<div>
+  <label
+    class="inputLabel"
+    for=":r2:"
+  >
+    <div
+      class="inputWrapper"
+    >
+      <input
+        class="input base"
+        id=":r2:"
+        placeholder="Placeholder"
+        type="text"
+      />
+    </div>
+  </label>
+</div>
+`;

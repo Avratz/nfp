@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopularAuctionsStatus should render the component 1`] = `
+<div>
+  <div
+    class="auctionStatus"
+  >
+    <div>
+      <div
+        class="auctionStatusTitle"
+      >
+        Current Bid
+      </div>
+      <h4
+        class="heading 5xl"
+      >
+        1 ETH
+      </h4>
+      <h5
+        class="heading 2xl priceUsd"
+      >
+        $ 
+        200.00
+      </h5>
+    </div>
+    <div>
+      <div
+        class="auctionStatusTitle"
+      >
+        Auction ending in
+      </div>
+      <div
+        class="timer"
+      >
+        <div
+          class="time"
+        >
+          <div
+            class="timeValue"
+          >
+            1
+          </div>
+          <div
+            class="timeUnit"
+          >
+            Hrs
+          </div>
+        </div>
+        <div
+          class="time"
+        >
+          <div
+            class="timeValue"
+          >
+            2
+          </div>
+          <div
+            class="timeUnit"
+          >
+            mins
+          </div>
+        </div>
+        <div
+          class="time"
+        >
+          <div
+            class="timeValue"
+          >
+            3
+          </div>
+          <div
+            class="timeUnit"
+          >
+            secs
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

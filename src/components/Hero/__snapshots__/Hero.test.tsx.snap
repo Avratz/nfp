@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero renders Hero 1`] = `
+<div>
+  <section
+    class="hero container containerPadding"
+  >
+    <p
+      class="toptitle"
+    >
+      Create, explore, & SELL digital art NFTs.
+    </p>
+    <h2
+      class="heading 4xl title"
+    >
+      The new creative economy.
+    </h2>
+    <a
+      class="link button primary base exploreButton"
+      href="/"
+    >
+      Explore
+    </a>
+  </section>
+</div>
+`;

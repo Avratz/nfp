@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionBox renders default 1`] = `
+<div>
+  <div
+    class="selectBox"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="button"
+      data-headlessui-state=""
+      id="headlessui-listbox-button-:r5:"
+      type="button"
+    >
+      <span>
+        Select box
+      </span>
+      <span
+        class="icon"
+      >
+        <div>
+          u
+        </div>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SelectBox renders default 1`] = `
+<div>
+  <div
+    class="selectBox"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="button"
+      data-headlessui-state=""
+      id="headlessui-listbox-button-:r0:"
+      type="button"
+    >
+      <span>
+        Select box
+      </span>
+      <span
+        class="icon"
+      >
+        <div>
+          u
+        </div>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SelectBox renders with label 1`] = `
+<div>
+  <div
+    class="selectBox"
+  >
+    <label
+      class="label"
+      data-headlessui-state=""
+      id="headlessui-listbox-label-:r2:"
+    >
+      Label
+    </label>
+    <button
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-labelledby="headlessui-listbox-label-:r2: headlessui-listbox-button-:r3:"
+      class="button"
+      data-headlessui-state=""
+      id="headlessui-listbox-button-:r3:"
+      type="button"
+    >
+      <span>
+        Select box
+      </span>
+      <span
+        class="icon"
+      >
+        <div>
+          u
+        </div>
+      </span>
+    </button>
+  </div>
+</div>
+`;
