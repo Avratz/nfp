@@ -19,7 +19,15 @@ export function useCarousel<T extends any[]>(
     return function () {
       const currentIndex = index.current
       let nextIndex = currentIndex + (direction === 'next' ? 1 : -1)
-      nextIndex = nextIndex < 0 ? data.length - 1 : nextIndex
+
+      if (nextIndex >= data.length) {
+        nextIndex = 0
+      }
+
+      if (nextIndex < 0) {
+        nextIndex = data.length - 1
+      }
+
       index.current = nextIndex
       setSelectedSlide(data[index.current])
     }

@@ -10,7 +10,7 @@ export function filterAuctions(auctions: Auction[], filters: FiltersType) {
   return pipeline(auctions)
 }
 
-function orderByCreation(filters: FiltersType) {
+export function orderByCreation(filters: FiltersType) {
   return function sort(auctions: Auction[]) {
     let orderBy = filters.orderBy
     return auctions.sort((auctionA, auctionB) => {
@@ -27,8 +27,7 @@ function orderByCreation(filters: FiltersType) {
 /*
  * All the auctions are grouped by createdAt, then sorted by likes.
  * But none of the auctions have the same createdAt, so this have no effect.
- */
-function orderByLikes(filters: FiltersType) {
+export function orderByLikes(filters: FiltersType) {
   return function sort(auctions: Auction[]) {
     let likes = filters.likes
 
@@ -53,6 +52,7 @@ function orderByLikes(filters: FiltersType) {
   }
 }
 
+
 function mostLiked(auctionA: Auction, auctionB: Auction) {
   if (auctionB.likes - auctionA.likes > 0) {
     return 1
@@ -61,6 +61,7 @@ function mostLiked(auctionA: Auction, auctionB: Auction) {
   }
   return 0
 }
+*/
 
 function filterBy(filters: FiltersType) {
   return function filter(auctions: Auction[]) {
@@ -75,13 +76,16 @@ function filterBy(filters: FiltersType) {
   }
 }
 
-function filterByCategory(category: FiltersType['category'], auction: Auction) {
+export function filterByCategory(
+  category: FiltersType['category'],
+  auction: Auction,
+) {
   return category === 'all-items'
     ? true
     : auction.type.toLowerCase() === category
 }
 
-function filterByPriceRange(
+export function filterByPriceRange(
   priceRange: FiltersType['priceRange'],
   auction: Auction,
 ) {
@@ -89,13 +93,13 @@ function filterByPriceRange(
   return Number(instantPrice) <= priceRange
 }
 
-function filterByColor(color: FiltersType['colors'], auction: Auction) {
+export function filterByColor(color: FiltersType['colors'], auction: Auction) {
   return color === 'all'
     ? true
     : auction.attributes.color.toLowerCase() === color
 }
 
-function filterBySearchKey(
+export function filterBySearchKey(
   searchKey: FiltersType['searchKey'],
   auction: Auction,
 ) {

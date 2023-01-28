@@ -6,7 +6,7 @@ function getData(requests: Request[]) {
   return Promise.all(requests.map((request) => request()))
 }
 
-type WithDataProps = {
+export type WithDataProps = {
   requests: Request[]
 } & Record<string, any>
 
