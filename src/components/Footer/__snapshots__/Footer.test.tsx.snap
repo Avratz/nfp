@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders Footer 1`] = `
+<div>
+  <footer
+    class="footer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="logoContainer"
+      >
+        <a
+          class="link logo"
+          href="/"
+        >
+          <picture
+            class="isotipo"
+          />
+          <h1
+            class="heading 2xl inlineBlock heading"
+          >
+            NFPaisanos
+          </h1>
+        </a>
+        <h2
+          class="heading base heading"
+        >
+          The New Creative Economy
+        </h2>
+      </div>
+      <hr
+        class="divider horizontal"
+      />
+      <p
+        class="createdBy"
+      >
+        Created with ❤️ by Avratz
+      </p>
+    </div>
+  </footer>
+</div>
+`;

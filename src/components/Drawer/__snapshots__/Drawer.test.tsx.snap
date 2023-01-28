@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer renders Drawer closed 1`] = `
+<div>
+  <nav
+    class="nav"
+    style="clip-path: inset(0% 0% 100% 0%);"
+  >
+    <div
+      class="navInner"
+    >
+      <h3
+        class="heading 2xl heading"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      >
+        Menu
+      </h3>
+      <a
+        class="link link"
+        href="/"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      >
+        Discover
+      </a>
+      <a
+        class="link link"
+        href="/"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      >
+        What we do
+      </a>
+      <div
+        class="lineSeparation"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      />
+      <h3
+        class="heading 2xl heading"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      >
+        Connect
+      </h3>
+      <a
+        class="link button primaryDark base button"
+        href="/"
+        style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      >
+        Connect Wallet
+      </a>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Drawer renders Drawer open 1`] = `
+<div>
+  <nav
+    class="nav"
+    data-projection-id="1"
+    style="clip-path: inset(0% 0% 0% 0%);"
+  >
+    <div
+      class="navInner"
+      data-projection-id="2"
+    >
+      <h3
+        class="heading 2xl heading"
+        style="opacity: 1; transform: none;"
+      >
+        Menu
+      </h3>
+      <a
+        class="link link"
+        data-projection-id="4"
+        href="/"
+        style="opacity: 1; transform: none;"
+      >
+        Discover
+      </a>
+      <a
+        class="link link"
+        data-projection-id="5"
+        href="/"
+        style="opacity: 1; transform: none;"
+      >
+        What we do
+      </a>
+      <div
+        class="lineSeparation"
+        data-projection-id="6"
+        style="opacity: 1; transform: none;"
+      />
+      <h3
+        class="heading 2xl heading"
+        style="opacity: 1; transform: none;"
+      >
+        Connect
+      </h3>
+      <a
+        class="link button primaryDark base button"
+        data-projection-id="8"
+        href="/"
+        style="opacity: 1; transform: none;"
+      >
+        Connect Wallet
+      </a>
+    </div>
+  </nav>
+</div>
+`;

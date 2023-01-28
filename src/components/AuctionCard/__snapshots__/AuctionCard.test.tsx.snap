@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuctionCard renders AuctionCard 1`] = `
+<div>
+  <article
+    class="auctionCard"
+    style="opacity: 0;"
+  >
+    <picture
+      class="image"
+    >
+      <div
+        class="layerOver"
+      >
+        <div
+          class="auctionInfoHover"
+        >
+          <div
+            class="badge solid"
+          >
+            epic
+          </div>
+          <button
+            class="button icon base heartButton"
+            title="Like"
+          >
+            <div />
+          </button>
+        </div>
+        <button
+          class="button accent base placeABidBtn"
+        >
+          <span>
+            Place a bid
+          </span>
+           
+          <div />
+        </button>
+      </div>
+      <img
+        alt=""
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        sizes="(max-width: 768px) 40vw, 15vw"
+        src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=3840&q=65"
+        srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=96&q=65 96w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=128&q=65 128w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=256&q=65 256w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=384&q=65 384w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=640&q=65 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=750&q=65 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=828&q=65 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=1080&q=65 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=1200&q=65 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=1920&q=65 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=2048&q=65 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fc_scale%2Cw_1000%2Fv1657121559%2FNFPAISANOS%2Fimg_125_mrxfbh.png&w=3840&q=65 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+      />
+    </picture>
+    <div
+      class="auctionCardData"
+    >
+      <header
+        class="headerTitle"
+      >
+        <h3
+          class="heading base title"
+        >
+          Fernando Medina
+           NFT
+        </h3>
+        <div
+          class="badge outline"
+        >
+          4.45 ETH
+        </div>
+      </header>
+      <div
+        class="stock"
+      >
+        <span
+          class="stockAvatars"
+        >
+          <picture
+            class="avatar small"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="20"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=3840&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F05_rdi4su.png&w=3840&q=75 3840w"
+              style="color: transparent;"
+              width="20"
+            />
+          </picture>
+          <picture
+            class="avatar small"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="20"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=3840&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdvmll0ruo%2Fimage%2Fupload%2Fv1657153929%2FNFPAISANOS%2F04_uunxgl.png&w=3840&q=75 3840w"
+              style="color: transparent;"
+              width="20"
+            />
+          </picture>
+        </span>
+        <span
+          class="stockValue"
+        >
+          1
+           in stock
+        </span>
+      </div>
+      <hr
+        class="divider horizontal"
+      />
+      <div
+        class="highestBidBox"
+      >
+        <span
+          class="highestBid"
+        >
+          <div />
+          <span>
+            Highest bid 
+          </span>
+          <span
+            class="highestBidValue"
+          >
+            0.010 ETH
+          </span>
+        </span>
+        <span>
+          New bid 🔥
+        </span>
+      </div>
+    </div>
+  </article>
+</div>
+`;

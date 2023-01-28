@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonMenu renders ButtonMenu closed 1`] = `
+<div>
+  <button
+    class="button icon base menuButton"
+    title="Menu"
+  >
+    <div
+      class="bar top"
+    />
+    <div
+      class="bar bottom"
+    />
+  </button>
+</div>
+`;
+
+exports[`ButtonMenu renders ButtonMenu open 1`] = `
+<div>
+  <button
+    class="button icon base menuButton"
+    title="Menu"
+  >
+    <div
+      class="bar top crossTop"
+    />
+    <div
+      class="bar bottom crossBottom"
+    />
+  </button>
+</div>
+`;
