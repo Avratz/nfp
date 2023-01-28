@@ -40,6 +40,4 @@ next-env.d.ts
 
 .env
 
-/public/sw.js
-
 .swc
